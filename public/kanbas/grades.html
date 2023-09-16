@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <title>Grades</title>
+</head>
+<body>
+    <table cellpadding="10">
+        <tbody>
+            <tr>
+                <td valign="top">
+                   <ul>
+                        <li><a href='account.html'>Account</a></li>
+                        <li><a href='#'>Dashboard</a></li>
+                        <li><a href='courses.html'>Courses</a></li>
+                        <li><a href='#'>Calendar</a></li>
+                        <li><a href='#'>Inbox</a></li>
+                        <li><a href='#'>History</a></li>
+                        <li><a href='#'>Studio</a></li>
+                        <li><a href='#'>Commons</a></li>
+                        <li><a href='#'>Help</a></li>
+                   </ul> 
+                </td>
+                <td valign="top">
+                    <ul>
+                         <li><a href='home.html'>Home</a></li>
+                         <li><a href='#'>Modules</a></li>
+                         <li><a href='#'>Piazza</a></li>
+                         <li><a href='#'>Zoom Meetings</a></li>
+                         <li><a href='assignments/index.html'>Assignments</a></li>
+                         <li><a href='#'>Quizzes</a></li>
+                         <li><a href='grades.html'>Grades</a></li>
+                         <li><a href='#'>People</a></li>
+                         <li><a href='#'>Panopto Video</a></li>
+                         <li><a href='#'>Discussions</a></li>
+                         <li><a href='#'>Announcements</a></li>
+                         <li><a href='#'>Pages</a></li>
+                         <li><a href='#'>Files</a></li>
+                         <li><a href='#'>Rubrics</a></li>
+                         <li><a href='#'>Outcomes</a></li>
+                         <li><a href='#'>Collaborations</a></li>
+                         <li><a href='#'>Syllabus</a></li>
+                         <li><a href='#'>Settings</a></li>
+                    </ul> 
+                </td>
+                <td valign="top">
+                    <select id="gradebook-type">
+                        <option selected value="GRADEBOOK">Gradebook</option>
+                    </select>
+                    <button type="button">Import</button>
+                    <select id="export-type">
+                        <option selected value="EXPORT">Export</option>
+                    </select>
+                    <button type="button">Configure</button>
+
+                    <br/>
+
+                    <h3>Student Names</h3>
+                    <input type="text" id="text-field-search-by-student-name" placeholder="Search Students"/><br/>
+
+                    <h3>Assignment Names</h3>
+                    <input type="text" id="text-field-search-by-assignment-name" placeholder="Search Assignments"/><br/><br/>
+
+                    <button type="button">Apply Filters</button><br/><br/>
+
+                    <table border="1" cellpadding="5">
+                        <thead>
+                            <tr>
+                                <th>Student Name</th>
+                                <th>A1 Setup <br/> Out of 100</th>
+                                <th>A2 HTML <br/> Out of 100</th>
+                                <th>A3 CSS <br/> Out of 100</th>
+                                <th>A4 Bootstrap <br/> Out of 100</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Alice Wonderland</td>
+                                <td><input type="number" id="grade-a1-alice-wonderland" value="98"/><br/></td>
+                                <td>89</td>
+                                <td>87</td>
+                                <td>90</td>
+                            </tr>
+                            <tr>
+                                <td>Princess Leia</td>
+                                <td>98</td>
+                                <td><input type="number" id="grade-a2-princess-leia" value="80"/><br/></td>
+                                <td>87</td>
+                                <td>86</td>
+                            </tr>
+                            <tr>
+                                <td>Lucy Skywalker</td>
+                                <td><input type="number" id="grade-a2-lucy-skywalker" value="99"/><br/></td>
+                                <td>88</td>
+                                <td>97</td>
+                                <td>100</td>
+                            </tr>
+                            <tr>
+                                <td>Darth Vader</td>
+                                <td>82</td>
+                                <td>95</td>
+                                <td>88</td>
+                                <td><input type="number" id="grade-a4-darth-vader" value="99"/><br/></td>
+                            </tr>
+                            <tr>
+                                <td>Yoda</td>
+                                <td>93</td>
+                                <td>96</td>
+                                <td><input type="number" id="grade-a3-yoda" value="92"/><br/></td>
+                                <td>87</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>

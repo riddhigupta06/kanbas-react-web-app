@@ -1,95 +1,224 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-   <meta charset="UTF-8">
-   <title>Edit Profile</title>
+<meta charset="UTF-8">
+<title>Courses</title>
+<link href="../navbar.css" rel="stylesheet"/>
+<link href="../index.css" rel="stylesheet"/>
+<link href="profile.css" rel="stylesheet"/>
+<link href="https://use.fontawesome.com/releases/v6.4.2/css/all.css" rel="stylesheet" />
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"/>
 </head>
 <body>
-    <table cellpadding="10">
-        <tbody>
-            <tr>
-                <td valign="top">
-                   <ul>
-                        <li><a href='../account.html'>Account</a></li>
-                        <li><a href='#'>Dashboard</a></li>
-                        <li><a href='../courses.html'>Courses</a></li>
-                        <li><a href='#'>Calendar</a></li>
-                        <li><a href='#'>Inbox</a></li>
-                        <li><a href='#'>History</a></li>
-                        <li><a href='#'>Studio</a></li>
-                        <li><a href='#'>Commons</a></li>
-                        <li><a href='#'>Help</a></li>
-                   </ul> 
-                </td>
-                <td valign="top">
-                    <ul>
-                         <li><a href='#'>Notifications</a></li>
-                         <li><a href='index.html'>Profile</a></li>
-                         <li><a href='#'>Files</a></li>
-                         <li><a href='#'>Settings</a></li>
-                         <li><a href='#'>ePortfolios</a></li>
-                         <li><a href='#'>Shared Content</a></li>
-                         <li><a href='#'>The Hub</a></li>
-                         <li><a href='#'>Qwickly Course Tools</a></li>
-                         <li><a href='#'>Global Announcements</a></li>
-                    </ul> 
-                </td>
-                <td valign="top">
-                    <h2>Riddhi Gupta</h2>
+    <div class="pageContainer">
+        <div class="navbarContainer">
+            <div class="navbarLogo">
+                <a class="navbarLogoLink" href="../index.html">
+                </a>
+            </div>
+            <ul class="navbarItemList">
+                <li class="navbarItem navbarItemSelected">
+                    <a class="navbarItemLink" href='index.html'>
+                        <div>
+                            <i class="fa fa-user-circle navbarAccountIcon"></i>
+                            <div class="navbarItemText navbarItemSelectedText">
+                                Account
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li class="navbarItem">
+                    <a class="navbarItemLink" href='#'>
+                        <div>
+                            <i class="fa fa-gauge navbarItemIcon"></i>
+                            <div class="navbarItemText">
+                                Dashboard
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li class="navbarItem">
+                    <a class="navbarItemLink" href='../courses.html'>
+                        <div>
+                            <i class="fa-solid fa-book navbarItemIcon"></i>
+                            <div class="navbarItemText">
+                                Courses
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li class="navbarItem">
+                    <a class="navbarItemLink" href='#'>
+                        <div>
+                            <i class="fa-solid fa-calendar-days navbarItemIcon"></i>
+                            <div class="navbarItemText">
+                                Calendar
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li class="navbarItem">
+                    <a class="navbarItemLink" href='#'>
+                        <div>
+                            <i class="fa-solid fa-inbox navbarItemIcon"></i>
+                            <div class="navbarItemText">
+                                Inbox
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li class="navbarItem">
+                    <a class="navbarItemLink" href='#'>
+                        <div>
+                            <i class="fa-regular fa-clock navbarItemIcon"></i>
+                            <div class="navbarItemText">
+                                History
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li class="navbarItem">
+                    <a class="navbarItemLink" href='#'>
+                        <div>
+                            <i class="fa-brands fa-youtube navbarItemIcon"></i>
+                            <div class="navbarItemText">
+                                Studio
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li class="navbarItem">
+                    <a class="navbarItemLink" href='#'>
+                        <div>
+                            <i class="fa-solid fa-right-from-bracket navbarItemIcon"></i>
+                            <div class="navbarItemText">
+                                Commons
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li class="navbarItem">
+                    <a class="navbarItemLink" href='#'>
+                        <div>
+                            <i class="fa-regular fa-circle-question navbarItemIcon"></i>
+                            <div class="navbarItemText">
+                                Help
+                            </div>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="mainContainer">
+            <div class="mainContainerHeader">
+                <div>
+                    <i class="fa-solid fa-bars menuIcon"></i>
+                </div>
+                <div style="padding-left: 40px;">
+                    <p class="lead">Riddhi Gupta's Profile</p>
+                </div>
+            </div>
+            <div class="mainContainerBody">
+                <div class="pageMenuContainer">
+                    <ul class="pageMenu">
+                        <li class="pageMenuItem"><a class="pageMenuItemLink" href='#'>Notifications</a></li>
+                        <li class="pageMenuItem pageMenuItemSelected"><a class="pageMenuItemLink pageMenuItemLinkSelected" href='index.html'>Profile</a></li>
+                        <li class="pageMenuItem"><a class="pageMenuItemLink" href='#'>Files</a></li>
+                        <li class="pageMenuItem"><a class="pageMenuItemLink" href='#'>Settings</a></li>
+                        <li class="pageMenuItem"><a class="pageMenuItemLink" href='#'>ePortfolios</a></li>
+                        <li class="pageMenuItem"><a class="pageMenuItemLink" href='#'>Shared Content</a></li>
+                        <li class="pageMenuItem"><a class="pageMenuItemLink" href='#'>The Hub</a></li>
+                        <li class="pageMenuItem"><a class="pageMenuItemLink" href='#'>Qwickly Course Tools</a></li>
+                        <li class="pageMenuItem"><a class="pageMenuItemLink" href='#'>Global Announcements</a></li>
+                </ul>
+                </div>
+                <div class="mainBodyContent">
+                    <a class="float-end" href='index.html'>
+                        <button type="button" class="btn btn-light btn-outline-dark">
+                            <i class="fa-solid fa-pencil editIcon"></i>
+                            Cancel Editing
+                        </button>
+                    </a>
 
-                    <label for="text-field-name">Name:*</label>
-                    <input type="text" id="text-field-name" placeholder="Full Name" value="Riddhi Gupta"/>
-                    <br/>
+                    <div class="profileComponent gridRowGap-10">
+                        <i class="fa fa-user-circle profileAvatar"></i>
+                    </div>
 
-                    <label for="text-field-pronouns">Pronouns:</label>
-                    <select id="text-field-pronouns">
-                        <option selected value="NONE">None</option>
-                    </select>
-                    <br/>
+                    <form class="topSpacing">
+                        <div class="mb-3 formField-400">
+                            <label for="text-field-name" class="form-label profileFormLabel">Name*</label>
+                            <input type="text" class="form-control" id="text-field-name" placeholder="Full Name" value="Riddhi Gupta" />
+                        </div>
+                        <div class="mb-3 formField-300">
+                            <label for="text-field-pronouns" class="form-label profileFormLabel">Pronouns:</label>
+                            <select class="form-select" aria-label="Default select example" id="text-field-pronouns">
+                                <option selected value="NONE">None</option>
+                            </select>
+                        </div>
+                        <div class="mb-3 formField-400">
+                            <label for="text-field-title" class="form-label profileFormLabel">Title</label>
+                            <input type="text" class="form-control" id="text-field-title"/>
+                        </div>
+                    
+                        <div class="mb-3 formField-400">
+                            <h3 class="profileComponentHeading">Contact</h3>
+                            <p>No registered services, you can add some on the <a class="link" href="#">settings</a> page.</p>
+                        </div>
 
-                    <label for="text-field-title">Title:</label>
-                    <input type="text" id="text-field-title"/><br/>
+                        <div class="mb-3 formField-400">
+                            <h3 class="profileComponentHeading">Biography</h3>
+                            <textarea class="form-control" rows="5" cols="50">Student, BS in Computer Science (Khoury College)</textarea>
+                        </div>
 
-                    <h3>Contact</h3>
-                    <p>No registered services, you can add some on the <a href="#">settings</a> page.</p>
-
-                    <h3>Biography</h3>
-                    <textarea rows="5" cols="50">Student, BS in Computer Science (Khoury College)</textarea>
-
-
-                    <h3>Links</h3>
-                    <table border="0" cellpadding="3">
-                        <thead>
-                            <tr>
-                                <th>Title</th>
-                                <th></th>
-                                <th>URL</th>
-                                <th></th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>
+                        <div class="mb-3" style="width: fit-content;">
+                            <h3 class="profileComponentHeading">Links</h3>
+                            <div class="row">
+                                <div class="col" style="text-align: center;">
+                                    <h6>Title</h6>
+                                </div>
+                                <div class="col" style="text-align: center;">
+                                    <h6>URL</h6>
+                                </div>
+                            </div>
+                            <div class="row row-cols-auto">
+                                <div class="col">
                                     <input type="text" id="link-title-1" placeholder="title" value="Google" />
-                                </td>
-                                <td>--></td>
-                                <td>
+                                </div>
+                                <div class="col">
+                                    <span>--></span>
+                                </div>
+                                <div class="col">
                                     <input type="text" id="link-url-1" placeholder="url" value="https://www.google.com" />
-                                </td>
-                                <td>
-                                    <a href="#">Remove</a>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    <button type="button">Add another link</button>
-                    <br/><br/>
+                                </div>
+                                <div class="col">
+                                    <a class="link" href="#">
+                                        <i class="fa-solid fa-xmark redIcon"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            
+                            <button type="button" class="btn btn-light btn-outline-dark topSpacing" style="width: 150px;">Add another link</button>
+                        </div>
 
-                    <a href="index.html"><button type="button">Cancel</button></a>
-                    <a href="index.html"><button type="button">Save Profile</button></a>
-                </td>
-            </tr>
-        </tbody>
-    </table>
+                        <div class="topSpacing-40">
+                            <a href="index.html" class="link">
+                                <button type="button" class="btn btn-light btn-outline-dark">
+                                    Cancel
+                                </button>
+                            </a>
+                            <a href="index.html" class="link">
+                                <button type="button" class="btn btn-danger">
+                                    Save Profile
+                                </button>
+                            </a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="mainContainerFooter">
+                <span>  </span>
+            </div>
+        </div>
+    </div>
 </body>
 </html>

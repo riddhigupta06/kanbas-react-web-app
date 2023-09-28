@@ -1,0 +1,86 @@
+.pageContainer {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.mainContainer {
+    width: 80%;
+    margin-left:85px;
+    float: left;
+    height: 100%;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.mainContainerHeader {
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    margin: 20px 20px 0px 20px;
+    border-bottom: 1px solid grey;
+}
+
+.mainContainerBody {
+    margin: 20px 20px 0px 20px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: row;
+}
+
+.mainContainerFooter {
+    height: 50px;
+    padding: 0;
+}
+
+.menuIcon {
+    color:#D41A2D;
+    font-size: 2em;
+}
+
+.pageMenuContainer {
+    width: 200px;
+    height: 100%;
+    display: block;
+}
+
+.mainBodyContent {
+    width: 100%;
+    height: 100%;
+    flex-grow: 1;
+    display: block;
+    margin-left: 50px;
+    padding: 0;
+}
+
+.pageMenu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.pageMenuItem {
+    padding: 8px;
+    text-align: left;
+}
+
+.pageMenuItemLink {
+    text-decoration: none;
+    color: #D41A2D;
+    font-size: 16px;
+}
+
+a.pageMenuItemLink:hover {
+    text-decoration: none;
+    color: #000000;
+}
+
+.pageMenuItemSelected {
+    border-left: 1px solid black;
+}
+
+.pageMenuItemLinkSelected {
+    color: #000000;
+}

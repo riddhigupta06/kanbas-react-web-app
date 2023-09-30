@@ -2,12 +2,11 @@
     width: 100%;
     height: 100%;
     display: flex;
-    flex-direction: row;
 }
 
 .mainContainer {
-    width: 80%;
     margin-left:85px;
+    padding:0;
     float: left;
     height: 100%;
     flex-grow: 1;
@@ -20,7 +19,10 @@
     display: flex;
     flex-direction: row;
     margin: 20px 20px 0px 20px;
-    border-bottom: 1px solid grey;
+}
+
+.divider {
+    margin: 0px 20px 0px 20px;
 }
 
 .mainContainerBody {
@@ -46,12 +48,19 @@
     display: block;
 }
 
+.rightSideBarContainer {
+    width: 300px;
+    height: 100%;
+    display: block;
+}
+
 .mainBodyContent {
     width: 100%;
     height: 100%;
     flex-grow: 1;
     display: block;
-    margin-left: 50px;
+    margin-left: 20px;
+    margin-right: 20px;
     padding: 0;
 }
 
@@ -82,5 +91,19 @@ a.pageMenuItemLink:hover {
 }
 
 .pageMenuItemLinkSelected {
+    color: #000000;
+}
+
+.redIcon {
+    font-size: 1em;
+    color: #D41A2D;
+}
+
+a.link {
+    color: #D41A2D;
+    text-decoration: none;
+}
+
+a.link:hover {
     color: #000000;
 }

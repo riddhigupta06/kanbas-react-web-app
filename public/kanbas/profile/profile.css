@@ -3,11 +3,6 @@
     color: gray;
 }
 
-.redIcon {
-    font-size: 1em;
-    color: #D41A2D;
-}
-
 .profileComponentHeading {
     font-weight: 300;
     color: #0F0F0F;
@@ -27,15 +22,6 @@
 
 .topSpacing-40 {
     margin-top: 40px;
-}
-
-a.link {
-    color: #D41A2D;
-    text-decoration: none;
-}
-
-a.link:hover {
-    color: #000000;
 }
 
 .editIcon {

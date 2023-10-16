@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard</title>
+    <link href="styles.css" rel="stylesheet"/>
+    <link href="https://use.fontawesome.com/releases/v6.4.2/css/all.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"/>
+</head>
+<body>
+    <!-- Header  -->
+    <div class="page-header">
+        <div class="d-flex flex-row my-3 me-3 align-items-center" style="margin-left: 100px;">
+            <div>
+                <i class="fa-solid fa-bars menuIcon"></i>
+            </div>
+            <div style="padding-left: 30px;">
+                <h3 style="font-weight: 200;">Dashboard</h3>
+            </div>
+        </div>
+        <hr class="me-4" style="margin-left: 100px;"/>
+    </div>
+
+    <!-- Header (mobile view) -->
+    <div class="page-header-sm">
+        <div class="d-flex flex-row p-3 align-items-center justify-content-center w-100" style="background-color:#000000;">
+            <h3 style="font-weight: 500; color:#ffffff; font-size:18px;">Dashboard</h3>
+        </div>
+    </div>
+
+    <!-- Kanbas nav (mobile view) -->
+    <input class="kanbas-nav-sm" type="checkbox" id="kanbas-nav-sm"/>
+    <label class="kanbas-nav-sm-label" for="kanbas-nav-sm">
+        <span class="hamb-line"><i class="fa-solid fa-bars menuIcon"></i>
+        </span>
+    </label>
+    <div class="col kanbas-nav-sm-menu">
+        <div class="p-3">
+            <ul class="navbarItemList-sm">
+                <li class="navbarItem-sm">
+                    <a class="navbarItemLink-sm" href='dashboard.html'>
+                        <div class="d-flex flex-row justify-content-start align-items-center">
+                            <i class="fa fa-gauge navbarItemIcon-sm"></i>
+                            <div class="navbarItemText-sm">
+                                Dashboard
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li class="navbarItem-sm ms-3">
+                    <a class="navbarItemLink-sm" href='profile/index.html'>
+                        <div class="d-flex flex-row justify-content-start align-items-center">
+                            <i class="fa fa-user-circle navbarAccountIcon-sm"></i>
+                            <div class="navbarItemText-sm  flex-grow-1">
+                                Account
+                            </div>
+                            <div class="float-end me-3">
+                                <i class="fa-solid fa-chevron-right" style="text-decoration:none; color:#000000"></i>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li class="navbarItem-sm ms-3">
+                    <a class="navbarItemLink-sm" href='home.html'>
+                        <div class="d-flex flex-row align-items-center">
+                            <i class="fa-solid fa-book navbarItemIcon-sm"></i>
+                            <div class="navbarItemText-sm  flex-grow-1">
+                                Courses
+                            </div>
+                            <div class="float-end me-3">
+                                <i class="fa-solid fa-chevron-right" style="text-decoration:none; color:#000000"></i>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li class="navbarItem-sm">
+                    <a class="navbarItemLink-sm" href='#'>
+                        <div class="d-flex flex-row justify-content-start align-items-center">
+                            <i class="fa-solid fa-calendar-days navbarItemIcon-sm"></i>
+                            <div class="navbarItemText-sm">
+                                Calendar
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li class="navbarItem-sm">
+                    <a class="navbarItemLink-sm" href='#'>
+                        <div class="d-flex flex-row justify-content-start align-items-center">
+                            <i class="fa-solid fa-inbox navbarItemIcon-sm"></i>
+                            <div class="navbarItemText-sm">
+                                Inbox
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li class="navbarItem-sm">
+                    <a class="navbarItemLink-sm" href='#'>
+                        <div class="d-flex flex-row justify-content-start align-items-center">
+                            <i class="fa-brands fa-youtube navbarItemIcon-sm p-0"></i>
+                            <div class="navbarItemText-sm p-0">
+                                Studio
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li class="navbarItem-sm">
+                    <a class="navbarItemLink-sm" href='#'>
+                        <div class="d-flex flex-row justify-content-start align-items-center">
+                            <i class="fa-solid fa-right-from-bracket navbarItemIcon-sm"></i>
+                            <div class="navbarItemText-sm">
+                                Commons
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li class="navbarItem-sm ms-3">
+                    <a class="navbarItemLink-sm" href='#'>
+                        <div class="d-flex flex-row align-items-center">
+                            <i class="fa-regular fa-clock navbarItemIcon-sm"></i>
+                            <div class="navbarItemText-sm  flex-grow-1">
+                                History
+                            </div>
+                            <div class="float-end me-3">
+                                <i class="fa-solid fa-chevron-right" style="text-decoration:none; color:#000000"></i>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li class="navbarItem-sm ms-3">
+                    <a class="navbarItemLink-sm" href='#'>
+                        <div class="d-flex flex-row align-items-center">
+                            <i class="fa-regular fa-circle-question navbarItemIcon-sm"></i>
+                            <div class="navbarItemText-sm flex-grow-1">
+                                Help
+                            </div>
+                            <div class="float-end me-3">
+                                <i class="fa-solid fa-chevron-right" style="text-decoration:none; color:#000000"></i>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Main content -->
+    <div class="row g-0 main-content">
+        <!-- Kanbs nav -->
+        <div class="col d-none d-sm-none d-md-block d-lg-block d-xl-block kanbas-nav" style="max-width: 85px;">
+            <div class="navbarLogo">
+                <a class="navbarLogoLink" href="dashboard.html">
+                </a>
+            </div>
+            <ul class="navbarItemList">
+                <li class="navbarItem">
+                    <a class="navbarItemLink" href='profile/index.html'>
+                        <div>
+                            <i class="fa fa-user-circle navbarAccountIcon"></i>
+                            <div class="navbarItemText">
+                                Account
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li class="navbarItem navbarItemSelected">
+                    <a class="navbarItemLink" href='dashboard.html'>
+                        <div>
+                            <i class="fa fa-gauge navbarItemIcon"></i>
+                            <div class="navbarItemText navbarItemSelectedText">
+                                Dashboard
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li class="navbarItem">
+                    <a class="navbarItemLink" href='home.html'>
+                        <div>
+                            <i class="fa-solid fa-book navbarItemIcon"></i>
+                            <div class="navbarItemText">
+                                Courses
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li class="navbarItem">
+                    <a class="navbarItemLink" href='#'>
+                        <div>
+                            <i class="fa-solid fa-calendar-days navbarItemIcon"></i>
+                            <div class="navbarItemText">
+                                Calendar
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li class="navbarItem">
+                    <a class="navbarItemLink" href='#'>
+                        <div>
+                            <i class="fa-solid fa-inbox navbarItemIcon"></i>
+                            <div class="navbarItemText">
+                                Inbox
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li class="navbarItem">
+                    <a class="navbarItemLink" href='#'>
+                        <div>
+                            <i class="fa-regular fa-clock navbarItemIcon"></i>
+                            <div class="navbarItemText">
+                                History
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li class="navbarItem">
+                    <a class="navbarItemLink" href='#'>
+                        <div>
+                            <i class="fa-brands fa-youtube navbarItemIcon"></i>
+                            <div class="navbarItemText">
+                                Studio
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li class="navbarItem">
+                    <a class="navbarItemLink" href='#'>
+                        <div>
+                            <i class="fa-solid fa-right-from-bracket navbarItemIcon"></i>
+                            <div class="navbarItemText">
+                                Commons
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li class="navbarItem mb-2">
+                    <a class="navbarItemLink" href='#'>
+                        <div>
+                            <i class="fa-regular fa-circle-question navbarItemIcon"></i>
+                            <div class="navbarItemText">
+                                Help
+                            </div>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <!-- Main content column  -->
+        <div class="col d-xs-block d-sm-block d-md-block d-lg-block d-xl-block main-content mx-2">
+            <div class="mainBodyContent">
+                <h4 style="font-weight: 300;">Published Courses (8)</h4>
+                <hr class="my-1" style="width: auto;"/>
+                <div class="row flex-row flex-wrap row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4">
+                    <div class="d-flex flex-fill" style="padding:15px; min-width: 300px; max-width: 300px;">
+                        <a href="home.html" style="text-decoration:none; color:black;">
+                            <div class="card" style="width: 270px">
+                                <div class="card-img-top" style="height:150px; background-color:chocolate;"></div>
+                                <div class="card-body">
+                                    <h5 class="card-title">CS3800 10323 Theory Of Computation</h5>
+                                    <p class="card-text">
+                                        CS3800.10323.202410
+                                        <br/>
+                                        202410_1 Fall 2023 Semester Full Term
+                                    </p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="d-flex flex-fill" style="padding:15px; min-width: 300px; max-width: 300px;">
+                        <a href="home.html" style="text-decoration:none; color:black;">
+                            <div class="card" style="width: 270px">
+                                <div class="card-img-top" style="height:150px; background-color: cornflowerblue;"></div>
+                                <div class="card-body">
+                                    <h5 class="card-title">CS4530 Fundamentals of Software Engineering</h5>
+                                    <p class="card-text">
+                                        CS4530.MERGED.202410
+                                        <br/>
+                                        202410_1 Fall 2023 Semester Full Term
+                                    </p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="d-flex flex-fill" style="padding:15px; min-width: 300px; max-width: 300px;">
+                        <a href="home.html" style="text-decoration:none; color:black;">
+                            <div class="card" style="width: 270px">
+                                <div class="card-img-top" style="height:150px; background-color:darkgreen;"></div>
+                                <div class="card-body">
+                                    <h5 class="card-title">CS4550 19753 Web Development</h5>
+                                    <p class="card-text">
+                                        CS4550.19753.202410
+                                        <br/>
+                                        202410_1 Fall 2023 Semester Full Term
+                                    </p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="d-flex flex-fill" style="padding:15px; min-width: 300px; max-width: 300px;">
+                        <a href="home.html" style="text-decoration:none; color:black;">
+                            <div class="card" style="width: 270px;">
+                                <div class="card-img-top" style="height:150px; background-color:midnightblue;"></div>
+                                <div class="card-body">
+                                    <h5 class="card-title">THTR1101 12320 Introduction To Theatre</h5>
+                                    <p class="card-text">
+                                        THTR1101.12320.202410
+                                        <br/>
+                                        202410_1 Fall 2023 Semester Full Term
+                                    </p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="d-flex flex-fill" style="padding:15px; min-width: 300px; max-width: 300px;">
+                        <a href="home.html" style="text-decoration:none; color:black;">
+                            <div class="card" style="width: 270px">
+                                <div class="card-img-top" style="height:150px; background-color:cadetblue;"></div>
+                                <div class="card-body">
+                                    <h5 class="card-title">CS3650 Computer Systems</h5>
+                                    <p class="card-text">
+                                        CS3650.MERGED.202310
+                                        <br/>
+                                        202310_1 Fall 2022 Semester Full Term
+                                    </p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="d-flex flex-fill" style="padding:15px; min-width: 300px; max-width: 300px;">
+                            <a href="home.html" style="text-decoration:none; color:black;">
+                            <div class="card" style="width: 270px">
+                                <div class="card-img-top" style="height:150px; background-color:midnightblue;"></div>
+                                <div class="card-body">
+                                    <h5 class="card-title">CS3000 19182 Algorithms & Data</h5>
+                                    <p class="card-text">
+                                        CS3000.MERGED.202310
+                                        <br/>
+                                        202310_1 Fall 2022 Semester Full Term
+                                    </p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="d-flex flex-fill" style="padding:15px; min-width: 300px; max-width: 300px;">
+                        <a href="home.html" style="text-decoration:none; color:black;">
+                            <div class="card" style="width: 270px">
+                                <div class="card-img-top" style="height:150px; background-color:indianred;"></div>
+                                <div class="card-body">
+                                    <h5 class="card-title">ENGW3302 33978 Advanced Writing</h5>
+                                    <p class="card-text">
+                                        ENGW3302.33978.202330
+                                        <br/>
+                                        202330_1 Spring 2023 Semester Full Term
+                                    </p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="d-flex flex-fill" style="padding:15px; min-width: 300px; max-width: 300px;">
+                        <a href="home.html" style="text-decoration:none; color:black;">
+                            <div class="card" style="width: 270px;">
+                                <div class="card-img-top" style="height:150px; background-color:teal;"></div>
+                                <div class="card-body">
+                                    <h5 class="card-title">MATH1365 33672 Intro to Math Reasoning</h5>
+                                    <p class="card-text">
+                                        MATH1365.33672.202230
+                                        <br/>
+                                        202230_1 Spring 2022 Semester Full Term
+                                    </p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer  -->
+    <div class="page-footer p-4">
+        <span>  </span>
+        </div>
+    </div>
+</body>
+</html>

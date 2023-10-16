@@ -1,189 +1,675 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-   <meta charset="UTF-8">
-   <title>Assignments</title>
+    <meta charset="UTF-8">
+    <title>CS4550 19753 Web Development | Assignments</title>
+    <link href="../styles.css" rel="stylesheet"/>
+    <link href="https://use.fontawesome.com/releases/v6.4.2/css/all.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"/>
 </head>
 <body>
-    <table cellpadding="10">
-        <tbody>
-            <tr>
-                <td valign="top">
-                   <ul>
-                        <li><a href='../account.html'>Account</a></li>
-                        <li><a href='#'>Dashboard</a></li>
-                        <li><a href='../courses.html'>Courses</a></li>
-                        <li><a href='#'>Calendar</a></li>
-                        <li><a href='#'>Inbox</a></li>
-                        <li><a href='#'>History</a></li>
-                        <li><a href='#'>Studio</a></li>
-                        <li><a href='#'>Commons</a></li>
-                        <li><a href='#'>Help</a></li>
-                   </ul>
-                </td>
-                <td valign="top">
-                    <ul>
-                         <li><a href='../home.html'>Home</a></li>
-                         <li><a href='#'>Modules</a></li>
-                         <li><a href='#'>Piazza</a></li>
-                         <li><a href='#'>Zoom Meetings</a></li>
-                         <li><a href='index.html'>Assignments</a></li>
-                         <li><a href='#'>Quizzes</a></li>
-                         <li><a href='../grades.html'>Grades</a></li>
-                         <li><a href='#'>People</a></li>
-                         <li><a href='#'>Panopto Video</a></li>
-                         <li><a href='#'>Discussions</a></li>
-                         <li><a href='#'>Announcements</a></li>
-                         <li><a href='#'>Pages</a></li>
-                         <li><a href='#'>Files</a></li>
-                         <li><a href='#'>Rubrics</a></li>
-                         <li><a href='#'>Outcomes</a></li>
-                         <li><a href='#'>Collaborations</a></li>
-                         <li><a href='#'>Syllabus</a></li>
-                         <li><a href='#'>Settings</a></li>
-                    </ul>
-                </td>
-                <td valign="top">
-                    <input type="text" id="text-field-search-by-assignment-name" placeholder="Search for Assignments"/>
-                    <button type="button">Group</button>
-                    <button type="button">Assignment</button>
-                    <select id="assignment-dates-type">
-                        <option selected value="EDIT-ASSIGNMENT-DATES">Edit Assignment Dates</option>
-                    </select>
+    <!-- Header  -->
+    <div class="page-header">
+        <div class="d-flex flex-row my-3 me-3 align-items-center" style="margin-left: 100px;">
+            <div>
+                <i class="fa-solid fa-bars menuIcon"></i>
+            </div>
+            <nav class="ps-5" aria-label="breadcrumb" style="--bs-breadcrumb-divider: '>';">
+                <ol class="breadcrumb mb-0" style="font-weight: 200;font-size: 18px;">
+                    <li class="breadcrumb-item">
+                        <a class="link" href="#" style="font-size: 18px;">
+                            CS4550.19753.202410
+                        </a>
+                    </li>
+                    <li class="breadcrumb-item active" aria-current="page">Assignments</li>
+                </ol>
+            </nav>
+            <div class="float-end ms-auto mb-0">
+                <button class="btn btn-light btn-outline-secondary">
+                    <a href="#" style="text-decoration:none; font-size:14px; color: #000000;">
+                        <i class="fa-solid fa-glasses"></i>
+                        Student View
+                    </a>
+                </button>
+            </div>
+        </div>
+        <hr class="me-4" style="margin-left: 100px;"/>
+    </div>
 
-                    <br/>
+    <!-- Header (mobile view) -->
+    <div class="page-header-sm">
+        <div class="d-flex flex-row p-3 align-items-center w-100" style="background-color:#000000;">
+            <div class="flex-grow-1">
+                <a href="#" style="text-decoration:none; display:block; font-size: 18px; font-weight:500; color:#ffffff;">
+                    CS4550.19753.202410
+                </a>
+                <a href="#" style="text-decoration:none; display:block; font-size: 18px; font-weight:300; color:#ffffff;">
+                    Assignments
+                </a>
+            </div>
+            <div class="float-end ms-auto mb-0 me-5">
+                <button class="btn btn-light btn-outline-secondary">
+                    <a href="#" style="text-decoration:none; font-size:14px; color: #000000;">
+                        <i class="fa-solid fa-glasses"></i>
+                    </a>
+                </button>
+            </div>
+        </div>
+    </div>
 
-                    <h3>
-                        ASSIGNMENTS 40% of Total 
-                        <select id="assignments-section-action-type">
-                            <option selected value="EDIT">Edit</option>
-                            <option value="SPEED-GRADER">Speed Grader</option>
-                            <option value="DUPLICATE">Duplicate</option>
-                            <option value="DELETE">Delete</option>
-                            <option value="MOVE-TO">Move to...</option>
-                            <option value="SEND-TO">Send to...</option>
-                            <option value="COPY-TO">Copy to...</option>
-                            <option value="SHARE-TO-COMMONS">Share to Commons</option>
-                         </select>
-                    </h3>
-                    <ul>
-                        <li>
-                            <a href="edit-a1.html">A1 - ENV + HTML</a><br/>
-                            <a href="#">Multiple Modules</a> | Not available yet
-                        </li>
-                        <li>
-                            <a href="edit-a2.html">A2 - CSS + BOOTSTRAP</a><br/>
-                            <a href="#">Multiple Modules</a> | Not available yet
-                        </li>
-                        <li>
-                            <a href="edit-a3.html">A3 - JS + REACT</a><br/>
-                            <a href="#">Multiple Modules</a> | Not available yet
-                        </li>
-                        <li>
-                            <a href="edit-a4.html">A4 - STATE + REDUX</a><br/>
-                            <a href="#">Multiple Modules</a> | Not available yet
-                        </li>
-                        <li>
-                            <a href="edit-a5.html">A5 - NODE + SESSION</a><br/>
-                            <a href="#">Multiple Modules</a> | Not available yet
-                        </li>
-                        <li>
-                            <a href="edit-a6.html">A6 - MONGO + MONGOOSE</a><br/>
-                            <a href="#">Multiple Modules</a> | Not available yet
-                        </li>
-                    </ul>
+    <!-- Kanbas nav (mobile view) -->
+    <input class="kanbas-nav-sm" type="checkbox" id="kanbas-nav-sm"/>
+    <label class="kanbas-nav-sm-label" for="kanbas-nav-sm">
+        <span class="hamb-line"><i class="fa-solid fa-bars menuIcon"></i>
+        </span>
+    </label>
+    <div class="col kanbas-nav-sm-menu">
+        <div class="p-3">
+            <ul class="navbarItemList-sm">
+                <li class="navbarItem-sm">
+                    <a class="navbarItemLink-sm" href='../dashboard.html'>
+                        <div class="d-flex flex-row justify-content-start align-items-center">
+                            <i class="fa fa-gauge navbarItemIcon-sm"></i>
+                            <div class="navbarItemText-sm">
+                                Dashboard
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li class="navbarItem-sm ms-3">
+                    <a class="navbarItemLink-sm" href='../profile/index.html'>
+                        <div class="d-flex flex-row justify-content-start align-items-center">
+                            <i class="fa fa-user-circle navbarAccountIcon-sm"></i>
+                            <div class="navbarItemText-sm  flex-grow-1">
+                                Account
+                            </div>
+                            <div class="float-end me-3">
+                                <i class="fa-solid fa-chevron-right" style="text-decoration:none; color:#000000"></i>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li class="navbarItem-sm ms-3">
+                    <a class="navbarItemLink-sm" href='../home.html'>
+                        <div class="d-flex flex-row align-items-center">
+                            <i class="fa-solid fa-book navbarItemIcon-sm"></i>
+                            <div class="navbarItemText-sm  flex-grow-1">
+                                Courses
+                            </div>
+                            <div class="float-end me-3">
+                                <i class="fa-solid fa-chevron-right" style="text-decoration:none; color:#000000"></i>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li class="navbarItem-sm">
+                    <a class="navbarItemLink-sm" href='#'>
+                        <div class="d-flex flex-row justify-content-start align-items-center">
+                            <i class="fa-solid fa-calendar-days navbarItemIcon-sm"></i>
+                            <div class="navbarItemText-sm">
+                                Calendar
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li class="navbarItem-sm">
+                    <a class="navbarItemLink-sm" href='#'>
+                        <div class="d-flex flex-row justify-content-start align-items-center">
+                            <i class="fa-solid fa-inbox navbarItemIcon-sm"></i>
+                            <div class="navbarItemText-sm">
+                                Inbox
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li class="navbarItem-sm">
+                    <a class="navbarItemLink-sm" href='#'>
+                        <div class="d-flex flex-row justify-content-start align-items-center">
+                            <i class="fa-brands fa-youtube navbarItemIcon-sm p-0"></i>
+                            <div class="navbarItemText-sm p-0">
+                                Studio
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li class="navbarItem-sm">
+                    <a class="navbarItemLink-sm" href='#'>
+                        <div class="d-flex flex-row justify-content-start align-items-center">
+                            <i class="fa-solid fa-right-from-bracket navbarItemIcon-sm"></i>
+                            <div class="navbarItemText-sm">
+                                Commons
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li class="navbarItem-sm ms-3">
+                    <a class="navbarItemLink-sm" href='#'>
+                        <div class="d-flex flex-row align-items-center">
+                            <i class="fa-regular fa-clock navbarItemIcon-sm"></i>
+                            <div class="navbarItemText-sm  flex-grow-1">
+                                History
+                            </div>
+                            <div class="float-end me-3">
+                                <i class="fa-solid fa-chevron-right" style="text-decoration:none; color:#000000"></i>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li class="navbarItem-sm ms-3">
+                    <a class="navbarItemLink-sm" href='#'>
+                        <div class="d-flex flex-row align-items-center">
+                            <i class="fa-regular fa-circle-question navbarItemIcon-sm"></i>
+                            <div class="navbarItemText-sm flex-grow-1">
+                                Help
+                            </div>
+                            <div class="float-end me-3">
+                                <i class="fa-solid fa-chevron-right" style="text-decoration:none; color:#000000"></i>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
 
-                    <br/>
+    <!-- Course nav (mobile view) -->
+    <input class="course-nav-sm" type="checkbox" id="course-nav-sm"/>
+    <label class="course-nav-sm-label" for="course-nav-sm">
+        <span><i class="fa-solid fa-chevron-down" style="color: #ffffff;"></i></i>
+        </span>
+    </label>
+    <div class="col course-nav-sm-menu">
+        <div class="p-3">
+            <ul class="navbarItemList-sm">
+                <li class="navbarItem-sm">
+                    <a class="navbarItemLink-sm" href='../home.html'>
+                        <div class="d-flex flex-row justify-content-start align-items-center">
+                            <i class="fa-solid fa-house menuIcon-sm"></i>
+                            <div class="navbarItemText-sm flex-grow-1">
+                                Home
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li class="navbarItem-sm">
+                    <a class="navbarItemLink-sm" href='#'>
+                        <div class="d-flex flex-row justify-content-start align-items-center">
+                            <i class="fa-solid fa-cubes menuIcon-sm"></i>
+                            <div class="navbarItemText-sm flex-grow-1">
+                                Modules
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li class="navbarItem-sm">
+                    <a class="navbarItemLink-sm" href='#'>
+                        <div class="d-flex flex-row align-items-center">
+                            <i class="fa-solid fa-plug menuIcon-sm"></i>
+                            <div class="navbarItemText-sm  flex-grow-1">
+                                Piazza
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li class="navbarItem-sm">
+                    <a class="navbarItemLink-sm" href='#'>
+                        <div class="d-flex flex-row justify-content-start align-items-center">
+                            <i class="fa-solid fa-plug menuIcon-sm"></i>
+                            <div class="navbarItemText-sm">
+                                Zoom Meetings
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li class="navbarItem-sm">
+                    <a class="navbarItemLink-sm" href='index.html'>
+                        <div class="d-flex flex-row justify-content-start align-items-center">
+                            <i class="fa-solid fa-pen-to-square menuIcon-sm"></i>
+                            <div class="navbarItemText-sm flex-grow-1">
+                                Assignments
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li class="navbarItem-sm">
+                    <a class="navbarItemLink-sm" href='#'>
+                        <div class="d-flex flex-row justify-content-start align-items-center">
+                            <i class="fa-solid fa-rocket menuIcon-sm"></i>
+                            <div class="navbarItemText-sm">
+                                Quizzes
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li class="navbarItem-sm">
+                    <a class="navbarItemLink-sm" href='../grades.html'>
+                        <div class="d-flex flex-row align-items-center">
+                            <i class="fa-solid fa-clipboard-check menuIcon-sm"></i>
+                            <div class="navbarItemText-sm  flex-grow-1">
+                                Grades
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li class="navbarItem-sm">
+                    <a class="navbarItemLink-sm" href='#'>
+                        <div class="d-flex flex-row align-items-center">
+                            <i class="fa-solid fa-user-group menuIcon-sm"></i>
+                            <div class="navbarItemText-sm flex-grow-1">
+                                People
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li class="navbarItem-sm">
+                    <a class="navbarItemLink-sm" href='#'>
+                        <div class="d-flex flex-row align-items-center">
+                            <i class="fa-solid fa-plug menuIcon-sm"></i>
+                            <div class="navbarItemText-sm flex-grow-1">
+                                Panopto Video
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li class="navbarItem-sm">
+                    <a class="navbarItemLink-sm" href='#'>
+                        <div class="d-flex flex-row align-items-center">
+                            <i class="fa-solid fa-comments menuIcon-sm"></i>
+                            <div class="navbarItemText-sm flex-grow-1">
+                                Discussions
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li class="navbarItem-sm">
+                    <a class="navbarItemLink-sm" href='#'>
+                        <div class="d-flex flex-row align-items-center">
+                            <i class="fa-solid fa-bullhorn menuIcon-sm"></i>
+                            <div class="navbarItemText-sm flex-grow-1">
+                                Announcements
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li class="navbarItem-sm">
+                    <a class="navbarItemLink-sm" href='#'>
+                        <div class="d-flex flex-row align-items-center">
+                            <i class="fa-regular fa-file-lines menuIcon-sm"></i>
+                            <div class="navbarItemText-sm flex-grow-1">
+                                Pages
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li class="navbarItem-sm">
+                    <a class="navbarItemLink-sm" href='#'>
+                        <div class="d-flex flex-row align-items-center">
+                            <i class="fa-regular fa-folder-closed menuIcon-sm"></i>
+                            <div class="navbarItemText-sm flex-grow-1">
+                                Files
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li class="navbarItem-sm">
+                    <a class="navbarItemLink-sm" href='#'>
+                        <div class="d-flex flex-row align-items-center">
+                            <i class="fa-solid fa-clipboard-check menuIcon-sm"></i>
+                            <div class="navbarItemText-sm flex-grow-1">
+                                Rubrics
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li class="navbarItem-sm">
+                    <a class="navbarItemLink-sm" href='#'>
+                        <div class="d-flex flex-row align-items-center">
+                            <i class="fa-solid fa-bullseye menuIcon-sm"></i>
+                            <div class="navbarItemText-sm flex-grow-1">
+                                Outcomes
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li class="navbarItem-sm">
+                    <a class="navbarItemLink-sm" href='#'>
+                        <div class="d-flex flex-row align-items-center">
+                            <i class="fa-regular fa-circle menuIcon-sm"></i>
+                            <div class="navbarItemText-sm flex-grow-1">
+                                Collaborations
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li class="navbarItem-sm">
+                    <a class="navbarItemLink-sm" href='#'>
+                        <div class="d-flex flex-row align-items-center">
+                            <i class="fa-solid fa-file-lines menuIcon-sm"></i>
+                            <div class="navbarItemText-sm flex-grow-1">
+                                Syllabus
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li class="navbarItem-sm">
+                    <a class="navbarItemLink-sm" href='#'>
+                        <div class="d-flex flex-row align-items-center">
+                            <i class="fa-solid fa-gear menuIcon-sm"></i>
+                            <div class="navbarItemText-sm flex-grow-1">
+                                Settings
+                            </div>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
 
-                    <h3>
-                        QUIZZES 10% of Total 
-                        <select id="quizzes-section-action-type">
-                            <option selected value="EDIT">Edit</option>
-                            <option value="SPEED-GRADER">Speed Grader</option>
-                            <option value="DUPLICATE">Duplicate</option>
-                            <option value="DELETE">Delete</option>
-                            <option value="MOVE-TO">Move to...</option>
-                            <option value="SEND-TO">Send to...</option>
-                            <option value="COPY-TO">Copy to...</option>
-                            <option value="SHARE-TO-COMMONS">Share to Commons</option>
-                         </select>
-                    </h3>
-                    <ul>
-                        <li>
-                            <a href="#">Q1 - HTML</a><br/>
-                            <a href="#">Multiple Modules</a> | Not available yet
-                        </li>
-                        <li>
-                            <a href="#">Q2 - CSS</a><br/>
-                            <a href="#">Multiple Modules</a> | Not available yet
-                        </li>
-                        <li>
-                            <a href="#">Q3 - JS,ES6</a><br/>
-                            <a href="#">Multiple Modules</a> | Not available yet
-                        </li>
-                        <li>
-                            <a href="#">Q4 - NODE</a><br/>
-                            <a href="#">Multiple Modules</a> | Not available yet
-                        </li>
-                        <li>
-                            <a href="#">Q5 - MONGO</a><br/>
-                            <a href="#">Multiple Modules</a> | Not available yet
-                        </li>
-                    </ul>
+    <!-- Main content -->
+    <div class="row g-0 main-content">
+        <!-- Kanbs nav -->
+        <div class="col d-none d-sm-none d-md-block d-lg-block d-xl-block kanbas-nav" style="max-width: 85px;">
+            <div class="navbarLogo">
+                <a class="navbarLogoLink" href="../dashboard.html">
+                </a>
+            </div>
+            <ul class="navbarItemList">
+                <li class="navbarItem">
+                    <a class="navbarItemLink" href='../profile/index.html'>
+                        <div>
+                            <i class="fa fa-user-circle navbarAccountIcon"></i>
+                            <div class="navbarItemText">
+                                Account
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li class="navbarItem">
+                    <a class="navbarItemLink" href='../dashboard.html'>
+                        <div>
+                            <i class="fa fa-gauge navbarItemIcon"></i>
+                            <div class="navbarItemText">
+                                Dashboard
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li class="navbarItem navbarItemSelected">
+                    <a class="navbarItemLink" href='../home.html'>
+                        <div>
+                            <i class="fa-solid fa-book navbarItemIcon"></i>
+                            <div class="navbarItemText navbarItemSelectedText">
+                                Courses
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li class="navbarItem">
+                    <a class="navbarItemLink" href='#'>
+                        <div>
+                            <i class="fa-solid fa-calendar-days navbarItemIcon"></i>
+                            <div class="navbarItemText">
+                                Calendar
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li class="navbarItem">
+                    <a class="navbarItemLink" href='#'>
+                        <div>
+                            <i class="fa-solid fa-inbox navbarItemIcon"></i>
+                            <div class="navbarItemText">
+                                Inbox
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li class="navbarItem">
+                    <a class="navbarItemLink" href='#'>
+                        <div>
+                            <i class="fa-regular fa-clock navbarItemIcon"></i>
+                            <div class="navbarItemText">
+                                History
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li class="navbarItem">
+                    <a class="navbarItemLink" href='#'>
+                        <div>
+                            <i class="fa-brands fa-youtube navbarItemIcon"></i>
+                            <div class="navbarItemText">
+                                Studio
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li class="navbarItem">
+                    <a class="navbarItemLink" href='#'>
+                        <div>
+                            <i class="fa-solid fa-right-from-bracket navbarItemIcon"></i>
+                            <div class="navbarItemText">
+                                Commons
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li class="navbarItem mb-2">
+                    <a class="navbarItemLink" href='#'>
+                        <div>
+                            <i class="fa-regular fa-circle-question navbarItemIcon"></i>
+                            <div class="navbarItemText">
+                                Help
+                            </div>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <!-- Course nav  -->
+        <div class="col d-none d-sm-none d-md-block d-lg-block d-xl-block col-auto d-block course-nav">
+            <p style="font-size: 12px;"><em>202410_1 Fall Semester...</em></p>
+            <ul class="pageMenu">
+                <li class="pageMenuItem"><a class="pageMenuItemLink" href='../home.html'>Home</a></li>
+                <li class="pageMenuItem"><a class="pageMenuItemLink" href='#'>Modules</a></li>
+                <li class="pageMenuItem"><a class="pageMenuItemLink" href='#'>Piazza</a></li>
+                <li class="pageMenuItem"><a class="pageMenuItemLink" href='#'>Zoom Meetings</a></li>
+                <li class="pageMenuItem pageMenuItemSelected"><a class="pageMenuItemLink pageMenuItemLinkSelected" href='index.html'>Assignments</a></li>
+                <li class="pageMenuItem"><a class="pageMenuItemLink" href='#'>Quizzes</a></li>
+                <li class="pageMenuItem"><a class="pageMenuItemLink" href='../grades.html'>Grades</a></li>
+                <li class="pageMenuItem"><a class="pageMenuItemLink" href='#'>People</a></li>
+                <li class="pageMenuItem"><a class="pageMenuItemLink" href='#'>Panopto Video</a></li>
+                <li class="pageMenuItem"><a class="pageMenuItemLink" href='#'>Discussions</a></li>
+                <li class="pageMenuItem"><a class="pageMenuItemLink" href='#'>Announcements</a></li>
+                <li class="pageMenuItem"><a class="pageMenuItemLink" href='#'>Pages</a></li>
+                <li class="pageMenuItem"><a class="pageMenuItemLink" href='#'>Files</a></li>
+                <li class="pageMenuItem"><a class="pageMenuItemLink" href='#'>Rubrics</a></li>
+                <li class="pageMenuItem"><a class="pageMenuItemLink" href='#'>Outcomes</a></li>
+                <li class="pageMenuItem"><a class="pageMenuItemLink" href='#'>Collaborations</a></li>
+                <li class="pageMenuItem"><a class="pageMenuItemLink" href='#'>Syllabus</a></li>
+                <li class="pageMenuItem"><a class="pageMenuItemLink" href='#'>Settings</a></li>
+            </ul>
+        </div>
+        <!-- Main content column  -->
+        <div class="col d-xs-block d-sm-block d-md-block d-lg-block d-xl-block main-content mx-2 me-4">
+            <input class="form-control w-25 d-inline m-0" type="text" placeholder="Search for Assignment" aria-label="default input example" />
+            <div class="float-end m-0">
+                <button type="button" class="m-1 mt-0 btn btn-light btn-outline-secondary">
+                    <a href="#" style="text-decoration: none; color: #000000">
+                        <i class="fa-solid fa-plus" style="color: #000000; font-size:1em;"></i>
+                        Group
+                    </a>
+                </button>
+                <button type="button" class="m-1 mt-0 btn btn-danger">
+                    <a href="#" style="text-decoration: none; color: #ffffff">
+                        <i class="fa-solid fa-plus" style="color: #ffffff; font-size:1em;"></i>
+                        Module
+                    </a>
+                </button>
+                <button type="button" class="m-1 mt-0 btn btn-light btn-outline-secondary">
+                    <a href="#" style="text-decoration: none; color: #000000">
+                        <i class="fa-solid fa-ellipsis-vertical" style="color: #000000; font-size:1em;"></i>
+                    </a>
+                </button>
+            </div>
+            <hr class="mt-2 mb-4"/>
+            <ul class="list-group" style="border-radius:0; font-size:16px;">
+                <li class="list-group-item list-group-item-secondary p-3" style="font-weight: 700;">
+                    <a class="ps-1" href="#" style="text-decoration: none; color:#000000;">
+                        <i class="fa-solid fa-ellipsis-vertical"></i>
+                        <i class="fa-solid fa-ellipsis-vertical"></i>
+                        <div class="d-inline ps-3">
+                            Assignments
+                        </div>
+                        <div class="float-end">
+                            <span class="m-0 me-3 p-2 bg-light rounded" style="color: #000000; font-weight:normal;">40% of total</span>
+                            <i class="fa-solid fa-plus pe-2" style="color: #000000; font-size:1em;"></i>
+                            <i class="fa-solid fa-ellipsis-vertical pe-2" style="color: #000000; font-size:1em;"></i>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+            <ul class="list-group" style="border-radius:0; font-size:16px; border-left: 4px solid green;">
+                <li class="list-group-item p-3">
+                    <div class="d-flex flex-row align-items-center">
+                        <div class="">
+                            <i class="fa-solid fa-ellipsis-vertical"></i>
+                            <i class="fa-solid fa-ellipsis-vertical"></i>
+                            <i class="fa-regular fa-pen-to-square ps-2" style="color: green; font-size:1em;"></i>
+                        </div>
+                        <div class="flex-grow-1 ps-3">
+                            <p class="m-0" style="font-weight:normal; font-size:12px;">
+                                <a href="edit.html" style="text-decoration: none; color:#000000;">
+                                    <strong style="font-weight: 700;font-size:16px;">A1 - ENV + HTML</strong>
+                                </a> 
+                                <br/>
+                                <strong style="font-weight: 500;">Due</strong> Sep 18, 2023 at 11:59pm | 100 pts
+                            </p>
+                        </div>
+                        <div class="">
+                            <i class="fa-regular fa-circle-check pe-2" style="color: green; font-size:1em;"></i>
+                            <i class="fa-solid fa-ellipsis-vertical pe-2" style="color: #000000; font-size:1em;"></i>
+                        </div>
+                    </div>
+                </li>
+                <li class="list-group-item p-3">
+                    <div class="d-flex flex-row align-items-center">
+                        <div class="">
+                            <i class="fa-solid fa-ellipsis-vertical"></i>
+                            <i class="fa-solid fa-ellipsis-vertical"></i>
+                            <i class="fa-regular fa-pen-to-square ps-2" style="color: green; font-size:1em;"></i>
+                        </div>
+                        <div class="flex-grow-1 ps-3">
+                            <p class="m-0" style="font-weight:normal; font-size:12px;">
+                                <a href="edit.html" style="text-decoration: none; color:#000000;">
+                                    <strong style="font-weight: 700;font-size:16px;">A2 - CSS + BOOTSTRAP</strong>
+                                </a>
+                                <br/>
+                                <strong style="font-weight: 500;">Due</strong> Oct 2, 2023 at 11:59pm | 100 pts
+                            </p>
+                        </div>
+                        <div class="">
+                            <i class="fa-regular fa-circle-check pe-2" style="color: green; font-size:1em;"></i>
+                            <i class="fa-solid fa-ellipsis-vertical pe-2" style="color: #000000; font-size:1em;"></i>
+                        </div>
+                    </div>
+                </li>
+                <li class="list-group-item p-3">
+                    <div class="d-flex flex-row align-items-center">
+                        <div class="">
+                            <i class="fa-solid fa-ellipsis-vertical"></i>
+                            <i class="fa-solid fa-ellipsis-vertical"></i>
+                            <i class="fa-regular fa-pen-to-square ps-2" style="color: green; font-size:1em;"></i>
+                        </div>
+                        <div class="flex-grow-1 ps-3">
+                            <p class="m-0" style="font-weight:normal; font-size:12px;">
+                                <a href="edit.html" style="text-decoration: none; color:#000000;">
+                                    <strong style="font-weight: 700;font-size:16px;">A3 - JS + REACT</strong>
+                                </a>
+                                <br/>
+                                <strong style="font-weight: 500;">Due</strong> Oct 16, 2023 at 11:59pm | 100 pts
+                            </p>
+                        </div>
+                        <div class="">
+                            <i class="fa-regular fa-circle-check pe-2" style="color: green; font-size:1em;"></i>
+                            <i class="fa-solid fa-ellipsis-vertical pe-2" style="color: #000000; font-size:1em;"></i>
+                        </div>
+                    </div>
+                </li>
+                <li class="list-group-item p-3">
+                    <div class="d-flex flex-row align-items-center">
+                        <div class="">
+                            <i class="fa-solid fa-ellipsis-vertical"></i>
+                            <i class="fa-solid fa-ellipsis-vertical"></i>
+                            <i class="fa-regular fa-pen-to-square ps-2" style="color: green; font-size:1em;"></i>
+                        </div>
+                        <div class="flex-grow-1 ps-3">
+                            <p class="m-0" style="font-weight:normal; font-size:12px;">
+                                <a href="edit.html" style="text-decoration: none; color:#000000;">
+                                    <strong style="font-weight: 700;font-size:16px;">A4 - STATE + REDUX</strong>
+                                </a>
+                                <br/>
+                                <strong style="font-weight: 500;">Due</strong> Oct 30, 2023 at 11:59pm | 100 pts
+                            </p>
+                        </div>
+                        <div class="">
+                            <i class="fa-regular fa-circle-check pe-2" style="color: green; font-size:1em;"></i>
+                            <i class="fa-solid fa-ellipsis-vertical pe-2" style="color: #000000; font-size:1em;"></i>
+                        </div>
+                    </div>
+                </li>
+                <li class="list-group-item p-3">
+                    <div class="d-flex flex-row align-items-center">
+                        <div class="">
+                            <i class="fa-solid fa-ellipsis-vertical"></i>
+                            <i class="fa-solid fa-ellipsis-vertical"></i>
+                            <i class="fa-regular fa-pen-to-square ps-2" style="color: green; font-size:1em;"></i>
+                        </div>
+                        <div class="flex-grow-1 ps-3">
+                            <p class="m-0" style="font-weight:normal; font-size:12px;">
+                                <a href="edit.html" style="text-decoration: none; color:#000000;">
+                                    <strong style="font-weight: 700;font-size:16px;">A5 - NODE + SESSION</strong>
+                                </a>
+                                <br/>
+                                <strong style="font-weight: 500;">Due</strong> Nov 13, 2023 at 11:59pm | 100 pts
+                            </p>
+                        </div>
+                        <div class="">
+                            <i class="fa-regular fa-circle-check pe-2" style="color: green; font-size:1em;"></i>
+                            <i class="fa-solid fa-ellipsis-vertical pe-2" style="color: #000000; font-size:1em;"></i>
+                        </div>
+                    </div>
+                </li>
+                <li class="list-group-item p-3">
+                    <div class="d-flex flex-row align-items-center">
+                        <div class="">
+                            <i class="fa-solid fa-ellipsis-vertical"></i>
+                            <i class="fa-solid fa-ellipsis-vertical"></i>
+                            <i class="fa-regular fa-pen-to-square ps-2" style="color: green; font-size:1em;"></i>
+                        </div>
+                        <div class="flex-grow-1 ps-3">
+                            <p class="m-0" style="font-weight:normal; font-size:12px;">
+                                <a href="edit.html" style="text-decoration: none; color:#000000;">
+                                    <strong style="font-weight: 700;font-size:16px;">A6 - MONGO</strong>
+                                </a>
+                                <br/>
+                                <strong style="font-weight: 500;">Due</strong> Nov 26, 2023 at 11:59pm | 100 pts
+                            </p>
+                        </div>
+                        <div class="">
+                            <i class="fa-regular fa-circle-check pe-2" style="color: green; font-size:1em;"></i>
+                            <i class="fa-solid fa-ellipsis-vertical pe-2" style="color: #000000; font-size:1em;"></i>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
 
-                    <br/>
-
-                    <h3>
-                        EXAMS 20% of Total 
-                        <select id="exams-section-action-type">
-                            <option selected value="EDIT">Edit</option>
-                            <option value="SPEED-GRADER">Speed Grader</option>
-                            <option value="DUPLICATE">Duplicate</option>
-                            <option value="DELETE">Delete</option>
-                            <option value="MOVE-TO">Move to...</option>
-                            <option value="SEND-TO">Send to...</option>
-                            <option value="COPY-TO">Copy to...</option>
-                            <option value="SHARE-TO-COMMONS">Share to Commons</option>
-                         </select>
-                    </h3>
-                    <ul>
-                        <li>
-                            <a href="#">Midterm</a><br/>
-                            <a href="#">Multiple Modules</a> | Not available yet
-                        </li>
-                        <li>
-                            <a href="#">Final</a><br/>
-                            <a href="#">Multiple Modules</a> | Not available yet
-                        </li>
-                    </ul>
-
-                    <br/>
-
-                    <h3>
-                        PROJECT 30% of Total 
-                        <select id="project-section-action-type">
-                            <option selected value="EDIT">Edit</option>
-                            <option value="SPEED-GRADER">Speed Grader</option>
-                            <option value="DUPLICATE">Duplicate</option>
-                            <option value="DELETE">Delete</option>
-                            <option value="MOVE-TO">Move to...</option>
-                            <option value="SEND-TO">Send to...</option>
-                            <option value="COPY-TO">Copy to...</option>
-                            <option value="SHARE-TO-COMMONS">Share to Commons</option>
-                         </select>
-                    </h3>
-                    <ul>
-                        <li>
-                            <a href="#">Project</a><br/>
-                            <a href="#">Multiple Modules</a> | Not available yet
-                        </li>
-                    </ul>
-
-                    <br/>
-
-                </td>
-            </tr>
-        </tbody>
-    </table>
+    <!-- Footer  -->
+    <div class="page-footer p-4">
+        <span>  </span>
+        </div>
+    </div>
 </body>
 </html>

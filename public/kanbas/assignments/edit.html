@@ -1,0 +1,735 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CS4550 19753 Web Development | Edit Assignment</title>
+    <link href="../styles.css" rel="stylesheet"/>
+    <link href="https://use.fontawesome.com/releases/v6.4.2/css/all.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"/>
+</head>
+<body>
+    <!-- Header  -->
+    <div class="page-header">
+        <div class="d-flex flex-row my-3 me-3 align-items-center" style="margin-left: 100px;">
+            <div>
+                <i class="fa-solid fa-bars menuIcon"></i>
+            </div>
+            <nav class="ps-5" aria-label="breadcrumb" style="--bs-breadcrumb-divider: '>';">
+                <ol class="breadcrumb mb-0" style="font-weight: 200;font-size: 18px;">
+                    <li class="breadcrumb-item">
+                        <a class="link" href="#" style="font-size: 18px;">
+                            CS4550.19753.202410
+                        </a>
+                    </li>
+                    <li class="breadcrumb-item active" aria-current="page">Assignments</li>
+                    <li class="breadcrumb-item active" aria-current="page">A1 - ENV + HTML</li>
+                </ol>
+            </nav>
+            <div class="float-end ms-auto mb-0">
+                <button class="btn btn-light btn-outline-secondary">
+                    <a href="#" style="text-decoration:none; font-size:14px; color: #000000;">
+                        <i class="fa-solid fa-glasses"></i>
+                        Student View
+                    </a>
+                </button>
+            </div>
+        </div>
+        <hr class="me-4" style="margin-left: 100px;"/>
+    </div>
+
+    <!-- Header (mobile view) -->
+    <div class="page-header-sm">
+        <div class="d-flex flex-row p-3 align-items-center w-100" style="background-color:#000000;">
+            <div class="flex-grow-1">
+                <a href="#" style="text-decoration:none; display:block; font-size: 18px; font-weight:500; color:#ffffff;">
+                    CS4550.19753.202410
+                </a>
+                <a href="#" style="text-decoration:none; display:block; font-size: 18px; font-weight:300; color:#ffffff;">
+                    Assignments | A1 - ENV + HTML
+                </a>
+            </div>
+            <div class="float-end ms-auto mb-0 me-5">
+                <button class="btn btn-light btn-outline-secondary">
+                    <a href="#" style="text-decoration:none; font-size:14px; color: #000000;">
+                        <i class="fa-solid fa-glasses"></i>
+                    </a>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Kanbas nav (mobile view) -->
+    <input class="kanbas-nav-sm" type="checkbox" id="kanbas-nav-sm"/>
+    <label class="kanbas-nav-sm-label" for="kanbas-nav-sm">
+        <span class="hamb-line"><i class="fa-solid fa-bars menuIcon"></i>
+        </span>
+    </label>
+    <div class="col kanbas-nav-sm-menu">
+        <div class="p-3">
+            <ul class="navbarItemList-sm">
+                <li class="navbarItem-sm">
+                    <a class="navbarItemLink-sm" href='../dashboard.html'>
+                        <div class="d-flex flex-row justify-content-start align-items-center">
+                            <i class="fa fa-gauge navbarItemIcon-sm"></i>
+                            <div class="navbarItemText-sm">
+                                Dashboard
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li class="navbarItem-sm ms-3">
+                    <a class="navbarItemLink-sm" href='../profile/index.html'>
+                        <div class="d-flex flex-row justify-content-start align-items-center">
+                            <i class="fa fa-user-circle navbarAccountIcon-sm"></i>
+                            <div class="navbarItemText-sm  flex-grow-1">
+                                Account
+                            </div>
+                            <div class="float-end me-3">
+                                <i class="fa-solid fa-chevron-right" style="text-decoration:none; color:#000000"></i>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li class="navbarItem-sm ms-3">
+                    <a class="navbarItemLink-sm" href='../home.html'>
+                        <div class="d-flex flex-row align-items-center">
+                            <i class="fa-solid fa-book navbarItemIcon-sm"></i>
+                            <div class="navbarItemText-sm  flex-grow-1">
+                                Courses
+                            </div>
+                            <div class="float-end me-3">
+                                <i class="fa-solid fa-chevron-right" style="text-decoration:none; color:#000000"></i>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li class="navbarItem-sm">
+                    <a class="navbarItemLink-sm" href='#'>
+                        <div class="d-flex flex-row justify-content-start align-items-center">
+                            <i class="fa-solid fa-calendar-days navbarItemIcon-sm"></i>
+                            <div class="navbarItemText-sm">
+                                Calendar
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li class="navbarItem-sm">
+                    <a class="navbarItemLink-sm" href='#'>
+                        <div class="d-flex flex-row justify-content-start align-items-center">
+                            <i class="fa-solid fa-inbox navbarItemIcon-sm"></i>
+                            <div class="navbarItemText-sm">
+                                Inbox
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li class="navbarItem-sm">
+                    <a class="navbarItemLink-sm" href='#'>
+                        <div class="d-flex flex-row justify-content-start align-items-center">
+                            <i class="fa-brands fa-youtube navbarItemIcon-sm p-0"></i>
+                            <div class="navbarItemText-sm p-0">
+                                Studio
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li class="navbarItem-sm">
+                    <a class="navbarItemLink-sm" href='#'>
+                        <div class="d-flex flex-row justify-content-start align-items-center">
+                            <i class="fa-solid fa-right-from-bracket navbarItemIcon-sm"></i>
+                            <div class="navbarItemText-sm">
+                                Commons
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li class="navbarItem-sm ms-3">
+                    <a class="navbarItemLink-sm" href='#'>
+                        <div class="d-flex flex-row align-items-center">
+                            <i class="fa-regular fa-clock navbarItemIcon-sm"></i>
+                            <div class="navbarItemText-sm  flex-grow-1">
+                                History
+                            </div>
+                            <div class="float-end me-3">
+                                <i class="fa-solid fa-chevron-right" style="text-decoration:none; color:#000000"></i>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li class="navbarItem-sm ms-3">
+                    <a class="navbarItemLink-sm" href='#'>
+                        <div class="d-flex flex-row align-items-center">
+                            <i class="fa-regular fa-circle-question navbarItemIcon-sm"></i>
+                            <div class="navbarItemText-sm flex-grow-1">
+                                Help
+                            </div>
+                            <div class="float-end me-3">
+                                <i class="fa-solid fa-chevron-right" style="text-decoration:none; color:#000000"></i>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Course nav (mobile view) -->
+    <input class="course-nav-sm" type="checkbox" id="course-nav-sm"/>
+    <label class="course-nav-sm-label" for="course-nav-sm">
+        <span><i class="fa-solid fa-chevron-down" style="color: #ffffff;"></i></i>
+        </span>
+    </label>
+    <div class="col course-nav-sm-menu">
+        <div class="p-3">
+            <ul class="navbarItemList-sm">
+                <li class="navbarItem-sm">
+                    <a class="navbarItemLink-sm" href='../home.html'>
+                        <div class="d-flex flex-row justify-content-start align-items-center">
+                            <i class="fa-solid fa-house menuIcon-sm"></i>
+                            <div class="navbarItemText-sm flex-grow-1">
+                                Home
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li class="navbarItem-sm">
+                    <a class="navbarItemLink-sm" href='#'>
+                        <div class="d-flex flex-row justify-content-start align-items-center">
+                            <i class="fa-solid fa-cubes menuIcon-sm"></i>
+                            <div class="navbarItemText-sm flex-grow-1">
+                                Modules
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li class="navbarItem-sm">
+                    <a class="navbarItemLink-sm" href='#'>
+                        <div class="d-flex flex-row align-items-center">
+                            <i class="fa-solid fa-plug menuIcon-sm"></i>
+                            <div class="navbarItemText-sm  flex-grow-1">
+                                Piazza
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li class="navbarItem-sm">
+                    <a class="navbarItemLink-sm" href='#'>
+                        <div class="d-flex flex-row justify-content-start align-items-center">
+                            <i class="fa-solid fa-plug menuIcon-sm"></i>
+                            <div class="navbarItemText-sm">
+                                Zoom Meetings
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li class="navbarItem-sm">
+                    <a class="navbarItemLink-sm" href='index.html'>
+                        <div class="d-flex flex-row justify-content-start align-items-center">
+                            <i class="fa-solid fa-pen-to-square menuIcon-sm"></i>
+                            <div class="navbarItemText-sm flex-grow-1">
+                                Assignments
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li class="navbarItem-sm">
+                    <a class="navbarItemLink-sm" href='#'>
+                        <div class="d-flex flex-row justify-content-start align-items-center">
+                            <i class="fa-solid fa-rocket menuIcon-sm"></i>
+                            <div class="navbarItemText-sm">
+                                Quizzes
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li class="navbarItem-sm">
+                    <a class="navbarItemLink-sm" href='../grades.html'>
+                        <div class="d-flex flex-row align-items-center">
+                            <i class="fa-solid fa-clipboard-check menuIcon-sm"></i>
+                            <div class="navbarItemText-sm  flex-grow-1">
+                                Grades
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li class="navbarItem-sm">
+                    <a class="navbarItemLink-sm" href='#'>
+                        <div class="d-flex flex-row align-items-center">
+                            <i class="fa-solid fa-user-group menuIcon-sm"></i>
+                            <div class="navbarItemText-sm flex-grow-1">
+                                People
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li class="navbarItem-sm">
+                    <a class="navbarItemLink-sm" href='#'>
+                        <div class="d-flex flex-row align-items-center">
+                            <i class="fa-solid fa-plug menuIcon-sm"></i>
+                            <div class="navbarItemText-sm flex-grow-1">
+                                Panopto Video
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li class="navbarItem-sm">
+                    <a class="navbarItemLink-sm" href='#'>
+                        <div class="d-flex flex-row align-items-center">
+                            <i class="fa-solid fa-comments menuIcon-sm"></i>
+                            <div class="navbarItemText-sm flex-grow-1">
+                                Discussions
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li class="navbarItem-sm">
+                    <a class="navbarItemLink-sm" href='#'>
+                        <div class="d-flex flex-row align-items-center">
+                            <i class="fa-solid fa-bullhorn menuIcon-sm"></i>
+                            <div class="navbarItemText-sm flex-grow-1">
+                                Announcements
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li class="navbarItem-sm">
+                    <a class="navbarItemLink-sm" href='#'>
+                        <div class="d-flex flex-row align-items-center">
+                            <i class="fa-regular fa-file-lines menuIcon-sm"></i>
+                            <div class="navbarItemText-sm flex-grow-1">
+                                Pages
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li class="navbarItem-sm">
+                    <a class="navbarItemLink-sm" href='#'>
+                        <div class="d-flex flex-row align-items-center">
+                            <i class="fa-regular fa-folder-closed menuIcon-sm"></i>
+                            <div class="navbarItemText-sm flex-grow-1">
+                                Files
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li class="navbarItem-sm">
+                    <a class="navbarItemLink-sm" href='#'>
+                        <div class="d-flex flex-row align-items-center">
+                            <i class="fa-solid fa-clipboard-check menuIcon-sm"></i>
+                            <div class="navbarItemText-sm flex-grow-1">
+                                Rubrics
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li class="navbarItem-sm">
+                    <a class="navbarItemLink-sm" href='#'>
+                        <div class="d-flex flex-row align-items-center">
+                            <i class="fa-solid fa-bullseye menuIcon-sm"></i>
+                            <div class="navbarItemText-sm flex-grow-1">
+                                Outcomes
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li class="navbarItem-sm">
+                    <a class="navbarItemLink-sm" href='#'>
+                        <div class="d-flex flex-row align-items-center">
+                            <i class="fa-regular fa-circle menuIcon-sm"></i>
+                            <div class="navbarItemText-sm flex-grow-1">
+                                Collaborations
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li class="navbarItem-sm">
+                    <a class="navbarItemLink-sm" href='#'>
+                        <div class="d-flex flex-row align-items-center">
+                            <i class="fa-solid fa-file-lines menuIcon-sm"></i>
+                            <div class="navbarItemText-sm flex-grow-1">
+                                Syllabus
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li class="navbarItem-sm">
+                    <a class="navbarItemLink-sm" href='#'>
+                        <div class="d-flex flex-row align-items-center">
+                            <i class="fa-solid fa-gear menuIcon-sm"></i>
+                            <div class="navbarItemText-sm flex-grow-1">
+                                Settings
+                            </div>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Main content -->
+    <div class="row g-0 main-content">
+        <!-- Kanbs nav -->
+        <div class="col d-none d-sm-none d-md-block d-lg-block d-xl-block kanbas-nav" style="max-width: 85px;">
+            <div class="navbarLogo">
+                <a class="navbarLogoLink" href="../dashboard.html">
+                </a>
+            </div>
+            <ul class="navbarItemList">
+                <li class="navbarItem">
+                    <a class="navbarItemLink" href='../profile/index.html'>
+                        <div>
+                            <i class="fa fa-user-circle navbarAccountIcon"></i>
+                            <div class="navbarItemText">
+                                Account
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li class="navbarItem">
+                    <a class="navbarItemLink" href='../dashboard.html'>
+                        <div>
+                            <i class="fa fa-gauge navbarItemIcon"></i>
+                            <div class="navbarItemText">
+                                Dashboard
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li class="navbarItem navbarItemSelected">
+                    <a class="navbarItemLink" href='../home.html'>
+                        <div>
+                            <i class="fa-solid fa-book navbarItemIcon"></i>
+                            <div class="navbarItemText navbarItemSelectedText">
+                                Courses
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li class="navbarItem">
+                    <a class="navbarItemLink" href='#'>
+                        <div>
+                            <i class="fa-solid fa-calendar-days navbarItemIcon"></i>
+                            <div class="navbarItemText">
+                                Calendar
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li class="navbarItem">
+                    <a class="navbarItemLink" href='#'>
+                        <div>
+                            <i class="fa-solid fa-inbox navbarItemIcon"></i>
+                            <div class="navbarItemText">
+                                Inbox
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li class="navbarItem">
+                    <a class="navbarItemLink" href='#'>
+                        <div>
+                            <i class="fa-regular fa-clock navbarItemIcon"></i>
+                            <div class="navbarItemText">
+                                History
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li class="navbarItem">
+                    <a class="navbarItemLink" href='#'>
+                        <div>
+                            <i class="fa-brands fa-youtube navbarItemIcon"></i>
+                            <div class="navbarItemText">
+                                Studio
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li class="navbarItem">
+                    <a class="navbarItemLink" href='#'>
+                        <div>
+                            <i class="fa-solid fa-right-from-bracket navbarItemIcon"></i>
+                            <div class="navbarItemText">
+                                Commons
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li class="navbarItem mb-2">
+                    <a class="navbarItemLink" href='#'>
+                        <div>
+                            <i class="fa-regular fa-circle-question navbarItemIcon"></i>
+                            <div class="navbarItemText">
+                                Help
+                            </div>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <!-- Course nav  -->
+        <div class="col d-none d-sm-none d-md-block d-lg-block d-xl-block col-auto d-block course-nav">
+            <p style="font-size: 12px;"><em>202410_1 Fall Semester...</em></p>
+            <ul class="pageMenu">
+                <li class="pageMenuItem"><a class="pageMenuItemLink" href='../home.html'>Home</a></li>
+                <li class="pageMenuItem"><a class="pageMenuItemLink" href='#'>Modules</a></li>
+                <li class="pageMenuItem"><a class="pageMenuItemLink" href='#'>Piazza</a></li>
+                <li class="pageMenuItem"><a class="pageMenuItemLink" href='#'>Zoom Meetings</a></li>
+                <li class="pageMenuItem pageMenuItemSelected"><a class="pageMenuItemLink pageMenuItemLinkSelected" href='index.html'>Assignments</a></li>
+                <li class="pageMenuItem"><a class="pageMenuItemLink" href='#'>Quizzes</a></li>
+                <li class="pageMenuItem"><a class="pageMenuItemLink" href='../grades.html'>Grades</a></li>
+                <li class="pageMenuItem"><a class="pageMenuItemLink" href='#'>People</a></li>
+                <li class="pageMenuItem"><a class="pageMenuItemLink" href='#'>Panopto Video</a></li>
+                <li class="pageMenuItem"><a class="pageMenuItemLink" href='#'>Discussions</a></li>
+                <li class="pageMenuItem"><a class="pageMenuItemLink" href='#'>Announcements</a></li>
+                <li class="pageMenuItem"><a class="pageMenuItemLink" href='#'>Pages</a></li>
+                <li class="pageMenuItem"><a class="pageMenuItemLink" href='#'>Files</a></li>
+                <li class="pageMenuItem"><a class="pageMenuItemLink" href='#'>Rubrics</a></li>
+                <li class="pageMenuItem"><a class="pageMenuItemLink" href='#'>Outcomes</a></li>
+                <li class="pageMenuItem"><a class="pageMenuItemLink" href='#'>Collaborations</a></li>
+                <li class="pageMenuItem"><a class="pageMenuItemLink" href='#'>Syllabus</a></li>
+                <li class="pageMenuItem"><a class="pageMenuItemLink" href='#'>Settings</a></li>
+            </ul>
+        </div>
+        <!-- Main content column  -->
+        <div class="col d-xs-block d-sm-block d-md-block d-lg-block d-xl-block main-content mx-2 me-4">
+            <div class="d-flex flex-row justify-content-end align-items-center">
+                <span class="m-0 me-3 p-2 rounded" style="color: green; font-weight:500;">
+                    <i class="fa-regular fa-circle-check pe-2" style="color: green; font-size:1em;"></i>
+                    Published
+                </span>
+                <button type="button" class="m-1 mt-0 btn btn-light btn-outline-secondary">
+                    <a href="#" style="text-decoration: none; color: #000000">
+                        <i class="fa-solid fa-ellipsis-vertical" style="color: #000000; font-size:1em;"></i>
+                    </a>
+                </button>
+            </div>
+            <hr class="mt-2 mb-4"/>
+            <form>
+                <div class="mb-3">
+                    <label for="assignmentName" class="form-label">Assignment Name</label>
+                    <input type="text" class="form-control" id="assignmentName" placeholder="Assignment Name" value="A1 - ENV + HTML">
+                </div>
+                <div class="mb-3">
+                    <textarea class="form-control" id="description" rows="3" placeholder="This is the assignment description.">This assignment describes how to install the development environment for creating and working with web applications we will be developing this semester. We will add new content every week, pushing the code to Github source respository, and then deploying the content to a remote server hosted by Netlify.</textarea>
+                </div>
+                <div class="row g-3 align-items-top mb-3">
+                    <div class="col-2">
+                        <label for="points" class="col-form-label">Points</label>
+                    </div>
+                    <div class="col-auto w-25">
+                        <input type="number" id="points" class="form-control" value="100">
+                    </div>
+                </div>
+
+                <div class="row g-3 align-items-top mb-3">
+                    <div class="col-2">
+                        <label for="assignmentGroup" class="col-form-label">Assignment group</label>
+                    </div>
+                    <div class="col-auto w-25">
+                        <select class="form-select" id="assignmentGroup">
+                            <option selected>ASSIGNMENTS</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="row g-3 align-items-top mb-3">
+                    <div class="col-2">
+                        <label for="displayFormat" class="col-form-label">Display Grade as</label>
+                    </div>
+                    <div class="col-auto w-25">
+                        <select class="form-select" id="displayFormat">
+                            <option selected>Percentage</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="row g-3 align-items-top mb-3">
+                    <div class="col-2">
+                        <label for="submissionType" class="col-form-label">Submission Type</label>
+                    </div>
+                    <div class="col-auto border p-3 w-25">
+                        <select class="form-select mb-2" id="submissionType">
+                            <option selected>Online</option>
+                        </select>
+
+                        <div class="">
+                            <label for="onlineEntryOptions" class="col-form-label" style="font-weight: 600;">Online Entry Options</label>
+                        </div>
+
+                        <div class="form-check my-3 mt-2">
+                            <input class="form-check-input" type="checkbox" value="" id="textEntry" checked>
+                            <label class="form-check-label" for="textEntry">
+                                Text Entry
+                            </label>
+                        </div>
+                        <div class="form-check my-3">
+                            <input class="form-check-input" type="checkbox" value="" id="websiteUrl" checked>
+                            <label class="form-check-label" for="websiteUrl">
+                                Website URL
+                            </label>
+                        </div>
+                        <div class="form-check my-3">
+                            <input class="form-check-input" type="checkbox" value="" id="mediaRecordings" checked>
+                            <label class="form-check-label" for="mediaRecordings">
+                                Media Recordings
+                            </label>
+                        </div>
+                        <div class="form-check my-3">
+                            <input class="form-check-input" type="checkbox" value="" id="studentAnnotation">
+                            <label class="form-check-label" for="studentAnnotation">
+                                Student Annotation
+                            </label>
+                        </div>
+                        <div class="form-check my-3">
+                            <input class="form-check-input" type="checkbox" value="" id="fileUploads" checked>
+                            <label class="form-check-label" for="fileUploads">
+                                File Uploads
+                            </label>
+                        </div>
+                        <div class="form-check my-3 ms-4" style="font-size: 14px;">
+                            <input class="form-check-input" type="checkbox" value="" id="restrictFileUploadTypes">
+                            <label class="form-check-label" for="restrictFileUploadTypes">
+                                Restrict File Upload Types
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row g-3 align-items-top mb-3">
+                    <div class="col-2">
+                        <label for="submissionAttempts" class="col-form-label">Submission Attempts</label>
+                    </div>
+                    <div class="col-auto border px-3 py-2 w-25">
+                        <label for="submissionAttempts" class="col-form-label" style="font-weight: 600;">Allowed Attempts</label>
+
+                        <select class="form-select mb-2" id="submissionAttempts">
+                            <option selected>Unlimited</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="row g-3 align-items-top mb-3">
+                    <div class="col-2">
+                        <label for="plagiarismReview" class="col-form-label">Plagiarism Review</label>
+                    </div>
+                    <div class="col-auto border p-3 w-25">
+                        <select class="form-select mb-2" id="plagiarismReview">
+                            <option selected>None</option>
+                        </select>
+                        <hr />
+                        <label for="showReportToStudents" class="col-form-label">Show report to sudents</label>
+                        <select class="form-select mb-2" id="showReportToStudents" disabled>
+                            <option selected>Immediately</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="row g-3 align-items-top">
+                    <div class="col-2">
+                        <label for="groupAssignment" class="col-form-label">Group Assignment</label>
+                    </div>
+                    <div class="col-auto border p-3 w-25">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="groupAssignmentTrue">
+                            <label class="form-check-label" for="groupAssignmentTrue">
+                                This is a Group Assignment
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="row g-3 align-items-top">
+                        <div class="col-2">
+                            <label for="peerReviews" class="col-form-label">Peer Reviews</label>
+                        </div>
+                        <div class="col-auto border p-3 w-25">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="requirePeerReviews">
+                                <label class="form-check-label" for="requirePeerReviews">
+                                    Require Peer Reviews
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row g-3 align-items-top mb-3">
+                        <div class="col-2">
+                            <label for="assignTo" class="col-form-label">Assign</label>
+                        </div>
+                        <div class="col-auto border px-3 py-2">
+                            <label for="assignTo" class="col-form-label" style="font-weight: 600;">Assign To</label>
+                            <select class="form-select mb-2" id="assignTo">
+                                <option selected>Everyone</option>
+                            </select>
+
+                            <label for="dueDate" class="col-form-label" style="font-weight: 600;">Due</label>
+                            <div class="input-group mb-2 d-flex flex-row">
+                                <input class="form-date-input flex-grow-1" type="date" value="2023-09-18" id="dueDate">
+                                <span class="input-group-text">
+                                    <i class="fa-solid fa-calendar"></i>
+                                </span>
+                            </div>
+
+                            <div class="row">
+                                <div class="col">
+                                    <label for="availableFromDate" class="col-form-label" style="font-weight: 600;">Available From</label>
+                                    <div class="input-group mb-3">
+                                        <input class="form-date-input" type="date" value="2023-09-06" id="availableFromDate">
+                                        <span class="input-group-text">
+                                            <i class="fa-solid fa-calendar"></i>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <label for="availableUntilDate" class="col-form-label" style="font-weight: 600;">Until</label>
+                                    <div class="input-group mb-3">
+                                        <input class="form-date-input" type="date" value="2023-09-18" id="availableUntilDate">
+                                        <span class="input-group-text">
+                                            <i class="fa-solid fa-calendar"></i>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <button type="button" class="btn btn-light w-100">
+                                <i class="fa-solid fa-plus"></i>
+                                Add
+                            </button>
+                        </div>
+                    </div>
+
+                </div>
+
+                <hr class="mb-1 w-100" />
+            </form>
+
+            <div class="mb-3">
+                <div class="form-check d-inline p-0">
+                    <input class="form-check-input ms-2" type="checkbox" value="" id="notifyUsers">
+                    <label class="form-check-label ps-2" for="notifyUsers">
+                        Notify users that this content has changed
+                    </label>
+                </div>
+                <div class="float-end m-0">
+                    <a href="index.html" style="text-decoration: none; color: #000000">
+                        <button class="m-1 mt-0 btn btn-light btn-outline-secondary">
+                            Cancel
+                        </button>
+                    </a>
+                    <a href="index.html" style="text-decoration: none; color: #ffffff">
+                        <button type="button" class="m-1 mt-0 btn btn-danger">
+                            Save
+                        </button>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer  -->
+    <div class="page-footer p-4">
+        <span>  </span>
+        </div>
+    </div>
+</body>
+</html>

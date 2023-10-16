@@ -1,0 +1,364 @@
+:root{
+    --white: #ffffff;
+    --black: #000000;
+    --red: #d41a2d;
+} /* variables*/
+
+/* Reset */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: var(--white);
+    font-family: "verdana";
+}
+a{
+    text-decoration: none;
+}
+ul{
+    list-style: none;
+}
+
+.page-header {
+    min-width: 50px;
+    width: 100%;
+}
+
+.page-footer {
+    min-width: 50px;
+    width: 100%;
+}
+
+.kanbas-nav {
+    padding: 0;
+    background-color: var(--black);
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    width: 85px;
+    overflow-y: auto;
+}
+
+.kanbas-nav-sm-menu {
+    display: none;
+    width: 100%;
+    height: 100%;
+    background-color: var(--white);
+    color: var(--black);
+}
+
+.course-nav-sm-menu {
+    display: none;
+    width: 100%;
+    height: 100%;
+    background-color: var(--white);
+    color: var(--black);
+}
+
+.kanbas-nav-sm {
+    display: none;
+}
+
+.kanbas-nav-sm-label {
+    display: none;
+}
+
+.course-nav-sm {
+    display: none;
+}
+
+.course-nav-sm-label {
+    display: none;
+}
+
+.navbarLogo {
+    width:85px;
+    padding: 5px;
+}
+
+.navbarLogoLink {
+    display: block;
+    overflow: hidden;
+    height: 75px;
+    background-image: url('images/northeasternLogo.png');
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.navbarItemList {
+    display: block;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    align-content: center;
+}
+
+.navbarItem {
+    width:100%;
+    padding: 5px;
+    display: list-item;
+}
+
+.navbarItemLink {
+    text-decoration: none;
+    width: 100%;
+    display: block;
+    text-align: center;
+}
+
+.navbarAccountIcon {
+    color: #ABAAAA;
+    font-size:1.75em;
+}
+
+.navbarItemIcon {
+    color: #D41A2D;
+    font-size:1.75em;
+    padding-top: 7px;
+}
+
+.navbarItemText {
+    color: #ffffff;
+    font-size: 13px;
+    padding-top: 5px;
+}
+
+.navbarItemSelected {
+    background-color: #ffffff;
+}
+
+.navbarItemSelectedText {
+    color: #D41A2D;
+}
+
+.menuIcon {
+    color: var(--red);
+    font-size: 2em;
+    box-sizing: none;
+}
+
+.menuIcon-sm {
+    color: var(--red);
+    font-size: 0.75em;
+    box-sizing: none;
+    padding: 0;
+}
+
+.course-nav {
+    margin-left: 105px;
+    height: 100%;
+    min-width: 195px;
+}
+
+.divider {
+    margin: 5px 0 5px 0;
+}
+
+.pageMenu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.pageMenuItem {
+    padding: 8px;
+    text-align: left;
+}
+
+.pageMenuItemLink {
+    text-decoration: none;
+    color: #D41A2D;
+    font-size: 16px;
+}
+
+a.pageMenuItemLink:hover {
+    text-decoration: none;
+    color: #000000;
+}
+
+.pageMenuItemSelected {
+    border-left: 1px solid black;
+}
+
+.pageMenuItemLinkSelected {
+    color: #000000;
+}
+
+.redIcon {
+    font-size: 1em;
+    color: #D41A2D;
+}
+
+a.link {
+    color: #D41A2D;
+    text-decoration: none;
+}
+
+a.link:hover {
+    color: #000000;
+}
+
+.page-header-sm {
+    display: none;
+}
+
+.mainBodyContent {
+    flex-grow: 1;
+    display: block;
+    margin-left: 100px;
+    margin-right: 20px;
+    padding: 0;
+}
+
+.course-card {
+    width: 270px;
+    margin: 0;
+}
+
+.course-card-wrapper {
+    padding: 15px;
+    min-width: 300px;
+    max-width: 300px;
+}
+
+@media (max-width: 768px) {
+
+    .page-header {
+        display: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .page-header-sm {
+        display: block;
+        min-width: 50px;
+        width: 100%;
+        background-color: var(--black);
+        color: var(--white);
+        font-size: 18px;
+        font-weight: 500;
+        text-align: center;
+        margin-bottom: 15px;
+    }
+
+    .kanbas-nav-sm-label {
+        display: block;
+        position: absolute;
+        top: 25px;
+        left: 25px;
+    }
+
+    .kanbas-nav-sm {
+        visibility: hidden;
+    }
+
+    .kanbas-nav-sm:checked ~ .main-content {
+        display: none;
+    } 
+
+    .kanbas-nav-sm:checked ~ .kanbas-nav-sm-menu {
+        display: block;
+        margin: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 10;
+    } 
+
+    .course-nav-sm {
+        visibility: hidden;
+    }
+    
+    .course-nav-sm-label {
+        display: block;
+        position: absolute;
+        top: 25px;
+        right: 25px;
+    }
+
+    .course-nav-sm:checked ~ .main-content {
+        display: none;
+    } 
+
+    .course-nav-sm:checked ~ .course-nav-sm-menu {
+        display: block;
+        margin: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 10;
+    } 
+
+    .navbarItemList-sm {
+        display: inline;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        align-content: center;
+    }
+    
+    .navbarItem-sm {
+        width:100%;
+        padding: 5px;
+        display: list-item;
+        margin-bottom: 10px;
+    }
+
+    .navbarItemLink-sm {
+        text-decoration: none;
+        width: 100%;
+        display: inline;
+        text-align: center;
+    }
+
+    .navbarAccountIcon-sm {
+        display: inline;
+        color: #ABAAAA;
+        font-size:1.75em;
+    }
+
+    .navbarItemIcon-sm {
+        color: var(--red);
+        display: inline;
+        font-size:1.75em;
+        padding-top: 7px;
+    }
+
+    .navbarItemText-sm {
+        color: var(--red);
+        display: inline;
+        font-size: 13px;
+        padding-top: 5px;
+        margin-left: 10px;
+        text-align: left;
+    }
+
+    .mainBodyContent {
+        width: 100%;
+        height: 100%;
+        flex-grow: 1;
+        display: block;
+        margin-left: 0;
+        padding: 20px;
+    }
+
+    .course-card {
+        width: 100%;
+    }
+
+    .course-card-wrapper {
+        padding: 15px;
+        min-width: 100%;
+        max-width: 100%;
+        flex-grow: 1;
+    }
+
+    .main-content {
+        padding: 0 20px 0 20px;
+    }
+
+}

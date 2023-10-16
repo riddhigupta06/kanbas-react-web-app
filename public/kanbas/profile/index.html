@@ -1,58 +1,393 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-   <meta charset="UTF-8">
-   <title>Profile</title>
+    <meta charset="UTF-8">
+    <title>Profile</title>
+    <link href="../styles.css" rel="stylesheet"/>
+    <link href="profile.css" rel="stylesheet"/>
+    <link href="https://use.fontawesome.com/releases/v6.4.2/css/all.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"/>
 </head>
 <body>
-    <table cellpadding="10">
-        <tbody>
-            <tr>
-                <td valign="top">
-                   <ul>
-                        <li><a href='../account.html'>Account</a></li>
-                        <li><a href='#'>Dashboard</a></li>
-                        <li><a href='../courses.html'>Courses</a></li>
-                        <li><a href='#'>Calendar</a></li>
-                        <li><a href='#'>Inbox</a></li>
-                        <li><a href='#'>History</a></li>
-                        <li><a href='#'>Studio</a></li>
-                        <li><a href='#'>Commons</a></li>
-                        <li><a href='#'>Help</a></li>
-                   </ul> 
-                </td>
-                <td valign="top">
-                    <ul>
-                         <li><a href='#'>Notifications</a></li>
-                         <li><a href='index.html'>Profile</a></li>
-                         <li><a href='#'>Files</a></li>
-                         <li><a href='#'>Settings</a></li>
-                         <li><a href='#'>ePortfolios</a></li>
-                         <li><a href='#'>Shared Content</a></li>
-                         <li><a href='#'>The Hub</a></li>
-                         <li><a href='#'>Qwickly Course Tools</a></li>
-                         <li><a href='#'>Global Announcements</a></li>
-                    </ul> 
-                </td>
-                <td valign="top">
-                    <p>Riddhi Gupta's Profile</p>
-                    <br/>
+    <!-- Header  -->
+    <div class="page-header">
+        <div class="d-flex flex-row my-3 me-3 align-items-center" style="margin-left: 100px;">
+            <div>
+                <i class="fa-solid fa-bars menuIcon"></i>
+            </div>
+            <div style="padding-left: 30px;">
+                <h3 style="font-weight: 200;">Riddhi Gupta's Profile</h3>
+            </div>
+        </div>
+        <hr class="me-4" style="margin-left: 100px;"/>
+    </div>
 
-                    <a href='edit.html'><button type="button">Edit Profile</button></a>
-                    <h2>Riddhi Gupta</h2>
+    <!-- Header (mobile view) -->
+    <div class="page-header-sm" style="min-height: 90px;">
+        <div class="d-flex flex-row p-3 align-items-center justify-content-center w-100" style="background-color:#000000;">
+            <h3 style="font-weight: 500; color:#ffffff; font-size:18px;">Riddhi Gupta's Profile</h3>
+        </div>
+    </div>
 
-                    <h3>Contact</h3>
-                    <p>No registered services, you can add some on the <a href="#">settings</a> page.</p>
+    <!-- Kanbas nav (mobile view) -->
+    <input class="kanbas-nav-sm" type="checkbox" id="kanbas-nav-sm"/>
+    <label class="kanbas-nav-sm-label" for="kanbas-nav-sm">
+        <span class="hamb-line"><i class="fa-solid fa-bars menuIcon"></i>
+        </span>
+    </label>
+    <div class="col kanbas-nav-sm-menu">
+        <div class="p-3">
+            <ul class="navbarItemList-sm">
+                <li class="navbarItem-sm">
+                    <a class="navbarItemLink-sm" href='../dashboard.html'>
+                        <div class="d-flex flex-row justify-content-start align-items-center">
+                            <i class="fa fa-gauge navbarItemIcon-sm"></i>
+                            <div class="navbarItemText-sm">
+                                Dashboard
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li class="navbarItem-sm ms-3">
+                    <a class="navbarItemLink-sm" href='index.html'>
+                        <div class="d-flex flex-row justify-content-start align-items-center">
+                            <i class="fa fa-user-circle navbarAccountIcon-sm"></i>
+                            <div class="navbarItemText-sm  flex-grow-1">
+                                Account
+                            </div>
+                            <div class="float-end me-3">
+                                <i class="fa-solid fa-chevron-right" style="text-decoration:none; color:#000000"></i>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li class="navbarItem-sm ms-3">
+                    <a class="navbarItemLink-sm" href='../home.html'>
+                        <div class="d-flex flex-row align-items-center">
+                            <i class="fa-solid fa-book navbarItemIcon-sm"></i>
+                            <div class="navbarItemText-sm  flex-grow-1">
+                                Courses
+                            </div>
+                            <div class="float-end me-3">
+                                <i class="fa-solid fa-chevron-right" style="text-decoration:none; color:#000000"></i>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li class="navbarItem-sm">
+                    <a class="navbarItemLink-sm" href='#'>
+                        <div class="d-flex flex-row justify-content-start align-items-center">
+                            <i class="fa-solid fa-calendar-days navbarItemIcon-sm"></i>
+                            <div class="navbarItemText-sm">
+                                Calendar
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li class="navbarItem-sm">
+                    <a class="navbarItemLink-sm" href='#'>
+                        <div class="d-flex flex-row justify-content-start align-items-center">
+                            <i class="fa-solid fa-inbox navbarItemIcon-sm"></i>
+                            <div class="navbarItemText-sm">
+                                Inbox
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li class="navbarItem-sm">
+                    <a class="navbarItemLink-sm" href='#'>
+                        <div class="d-flex flex-row justify-content-start align-items-center">
+                            <i class="fa-brands fa-youtube navbarItemIcon-sm p-0"></i>
+                            <div class="navbarItemText-sm p-0">
+                                Studio
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li class="navbarItem-sm">
+                    <a class="navbarItemLink-sm" href='#'>
+                        <div class="d-flex flex-row justify-content-start align-items-center">
+                            <i class="fa-solid fa-right-from-bracket navbarItemIcon-sm"></i>
+                            <div class="navbarItemText-sm">
+                                Commons
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li class="navbarItem-sm ms-3">
+                    <a class="navbarItemLink-sm" href='#'>
+                        <div class="d-flex flex-row align-items-center">
+                            <i class="fa-regular fa-clock navbarItemIcon-sm"></i>
+                            <div class="navbarItemText-sm  flex-grow-1">
+                                History
+                            </div>
+                            <div class="float-end me-3">
+                                <i class="fa-solid fa-chevron-right" style="text-decoration:none; color:#000000"></i>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li class="navbarItem-sm ms-3">
+                    <a class="navbarItemLink-sm" href='#'>
+                        <div class="d-flex flex-row align-items-center">
+                            <i class="fa-regular fa-circle-question navbarItemIcon-sm"></i>
+                            <div class="navbarItemText-sm flex-grow-1">
+                                Help
+                            </div>
+                            <div class="float-end me-3">
+                                <i class="fa-solid fa-chevron-right" style="text-decoration:none; color:#000000"></i>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
 
-                    <h3>Biography</h3>
-                    <p>Student, BS in Computer Science (Khoury College)</p>
+    <!-- Course nav (mobile view) -->
+    <input class="course-nav-sm" type="checkbox" id="course-nav-sm"/>
+    <label class="course-nav-sm-label" for="course-nav-sm">
+        <span><i class="fa-solid fa-chevron-down" style="color: #ffffff;"></i></i>
+        </span>
+    </label>
+    <div class="col course-nav-sm-menu">
+        <div class="p-3">
+            <ul class="navbarItemList-sm">
+                <li class="navbarItem-sm">
+                    <a class="navbarItemLink-sm" href='#'>
+                        <div class="d-flex flex-row justify-content-start align-items-center">
+                            <div class="navbarItemText-sm flex-grow-1">
+                                Notifications
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li class="navbarItem-sm">
+                    <a class="navbarItemLink-sm" href='index.html'>
+                        <div class="d-flex flex-row justify-content-start align-items-center">
+                            <div class="navbarItemText-sm flex-grow-1">
+                                Profile
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li class="navbarItem-sm">
+                    <a class="navbarItemLink-sm" href='#'>
+                        <div class="d-flex flex-row align-items-center">
+                            <div class="navbarItemText-sm  flex-grow-1">
+                                Files
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li class="navbarItem-sm">
+                    <a class="navbarItemLink-sm" href='#'>
+                        <div class="d-flex flex-row justify-content-start align-items-center">
+                            <div class="navbarItemText-sm">
+                                Settings
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li class="navbarItem-sm">
+                    <a class="navbarItemLink-sm" href='#'>
+                        <div class="d-flex flex-row justify-content-start align-items-center">
+                            <div class="navbarItemText-sm flex-grow-1">
+                                ePortfolios
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li class="navbarItem-sm">
+                    <a class="navbarItemLink-sm" href='#'>
+                        <div class="d-flex flex-row justify-content-start align-items-center">
+                            <div class="navbarItemText-sm">
+                                Shared Content
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li class="navbarItem-sm">
+                    <a class="navbarItemLink-sm" href='#'>
+                        <div class="d-flex flex-row align-items-center">
+                            <div class="navbarItemText-sm  flex-grow-1">
+                                The Hub
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li class="navbarItem-sm">
+                    <a class="navbarItemLink-sm" href='#'>
+                        <div class="d-flex flex-row align-items-center">
+                            <div class="navbarItemText-sm flex-grow-1">
+                                Qwickly Course Tools
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li class="navbarItem-sm">
+                    <a class="navbarItemLink-sm" href='#'>
+                        <div class="d-flex flex-row align-items-center">
+                            <div class="navbarItemText-sm flex-grow-1">
+                                Global Announcements
+                            </div>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
 
-                    <h3>Links</h3>
-                    <a href="https://www.google.com">Google</a>
-                    <br/>
-                </td>
-            </tr>
-        </tbody>
-    </table>
+    <!-- Main content -->
+    <div class="row g-0 main-content">
+        <!-- Kanbs nav -->
+        <div class="col d-none d-sm-none d-md-block d-lg-block d-xl-block kanbas-nav" style="max-width: 85px;">
+            <div class="navbarLogo">
+                <a class="navbarLogoLink" href="../dashboard.html">
+                </a>
+            </div>
+            <ul class="navbarItemList">
+                <li class="navbarItem navbarItemSelected">
+                    <a class="navbarItemLink" href='index.html'>
+                        <div>
+                            <i class="fa fa-user-circle navbarAccountIcon"></i>
+                            <div class="navbarItemText navbarItemSelectedText">
+                                Account
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li class="navbarItem">
+                    <a class="navbarItemLink" href='../dashboard.html'>
+                        <div>
+                            <i class="fa fa-gauge navbarItemIcon"></i>
+                            <div class="navbarItemText">
+                                Dashboard
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li class="navbarItem">
+                    <a class="navbarItemLink" href='../home.html'>
+                        <div>
+                            <i class="fa-solid fa-book navbarItemIcon"></i>
+                            <div class="navbarItemText">
+                                Courses
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li class="navbarItem">
+                    <a class="navbarItemLink" href='#'>
+                        <div>
+                            <i class="fa-solid fa-calendar-days navbarItemIcon"></i>
+                            <div class="navbarItemText">
+                                Calendar
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li class="navbarItem">
+                    <a class="navbarItemLink" href='#'>
+                        <div>
+                            <i class="fa-solid fa-inbox navbarItemIcon"></i>
+                            <div class="navbarItemText">
+                                Inbox
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li class="navbarItem">
+                    <a class="navbarItemLink" href='#'>
+                        <div>
+                            <i class="fa-regular fa-clock navbarItemIcon"></i>
+                            <div class="navbarItemText">
+                                History
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li class="navbarItem">
+                    <a class="navbarItemLink" href='#'>
+                        <div>
+                            <i class="fa-brands fa-youtube navbarItemIcon"></i>
+                            <div class="navbarItemText">
+                                Studio
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li class="navbarItem">
+                    <a class="navbarItemLink" href='#'>
+                        <div>
+                            <i class="fa-solid fa-right-from-bracket navbarItemIcon"></i>
+                            <div class="navbarItemText">
+                                Commons
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li class="navbarItem mb-2">
+                    <a class="navbarItemLink" href='#'>
+                        <div>
+                            <i class="fa-regular fa-circle-question navbarItemIcon"></i>
+                            <div class="navbarItemText">
+                                Help
+                            </div>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <!-- Course nav  -->
+        <div class="col d-none d-sm-none d-md-block d-lg-block d-xl-block col-auto d-block course-nav">
+            <ul class="pageMenu">
+                <li class="pageMenuItem"><a class="pageMenuItemLink" href='#'>Notifications</a></li>
+                <li class="pageMenuItem pageMenuItemSelected"><a class="pageMenuItemLink pageMenuItemLinkSelected" href='index.html'>Profile</a></li>
+                <li class="pageMenuItem"><a class="pageMenuItemLink" href='#'>Files</a></li>
+                <li class="pageMenuItem"><a class="pageMenuItemLink" href='#'>Settings</a></li>
+                <li class="pageMenuItem"><a class="pageMenuItemLink" href='#'>ePortfolios</a></li>
+                <li class="pageMenuItem"><a class="pageMenuItemLink" href='#'>Shared Content</a></li>
+                <li class="pageMenuItem"><a class="pageMenuItemLink" href='#'>The Hub</a></li>
+                <li class="pageMenuItem"><a class="pageMenuItemLink" href='#'>Qwickly Course Tools</a></li>
+                <li class="pageMenuItem"><a class="pageMenuItemLink" href='#'>Global Announcements</a></li>
+            </ul>
+        </div>
+        <!-- Main content column  -->
+        <div class="col d-xs-block d-sm-block d-md-block d-lg-block d-xl-block main-content mx-2 me-4">
+            <a class="float-end" href='edit.html'>
+                <button type="button" class="btn btn-light btn-outline-dark">
+                    <i class="fa-solid fa-pencil editIcon"></i>
+                    Edit Profile
+                </button>
+            </a>
+
+            <div class="profileComponent gridRowGap-10">
+                <i class="fa fa-user-circle profileAvatar"></i>
+                <h2 class="display-6">Riddhi Gupta</h2>
+            </div>
+            
+            <div class="profileComponent topSpacing">
+                <h3 class="profileComponentHeading">Contact</h3>
+                <p>No registered services, you can add some on the <a class="link" href="#">settings</a> page.</p>
+            </div>
+
+            <div class="profileComponent topSpacing">
+                <h3 class="profileComponentHeading">Biography</h3>
+                <p>Student, BS in Computer Science (Khoury College)</p>
+            </div>
+
+            <div class="profileComponent topSpacing">
+                <h3 class="profileComponentHeading">Links</h3>
+                <a class="link" href="https://www.google.com">Google</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer  -->
+    <div class="page-footer p-4">
+        <span>  </span>
+        </div>
+    </div>
 </body>
 </html>

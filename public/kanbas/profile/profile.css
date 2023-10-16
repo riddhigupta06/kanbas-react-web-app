@@ -1,0 +1,46 @@
+.profileAvatar {
+    font-size: 8em;
+    color: gray;
+}
+
+.profileComponentHeading {
+    font-weight: 300;
+    color: #0F0F0F;
+}
+
+.profileComponent {
+    display: grid;
+}
+
+.gridRowGap-10 {
+    row-gap: 10px;
+}
+
+.topSpacing {
+    margin-top: 20px;
+}
+
+.topSpacing-40 {
+    margin-top: 40px;
+}
+
+.editIcon {
+    font-size: 1.2em;
+    color: #000000;
+}
+
+.formField-300 {
+    width: 300px;
+}
+
+.formField-400 {
+    width: 400px;
+}
+
+.formField-800 {
+    width: 800px;
+}
+
+.profileFormLabel {
+    font-weight: 500;
+}

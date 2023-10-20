@@ -3,7 +3,7 @@ import { BiSolidUserCircle, BiTimeFive, BiHelpCircle } from "react-icons/bi";
 import { PiGaugeFill } from "react-icons/pi";
 import { FaBook } from "react-icons/fa";
 import { FaArrowRightFromBracket } from "react-icons/fa6";
-import { BsFillInboxFill, BsDisplayFill } from "react-icons/bs";
+import { BsFillInboxFill, BsDisplayFill, BsFillCalendarFill } from "react-icons/bs";
 
 function KanbasNavigation() {
   const Account = {
@@ -27,7 +27,7 @@ function KanbasNavigation() {
   const Calendar = {
     title: "Calendar",
     icon: (styling) => {
-      return <BiSolidUserCircle style={{ ...styling }} />;
+      return <BsFillCalendarFill style={{ ...styling }} />;
     },
   };
   const Inbox = {

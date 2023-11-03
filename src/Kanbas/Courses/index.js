@@ -1,4 +1,4 @@
-import { Navigate, Route, Routes } from "react-router-dom";
+import { Navigate, Route, Routes, useParams } from "react-router-dom";
 import CourseNavigation from "./CourseNavigation";
 import CourseHeader from "./CourseHeader";
 import Modules from "./Modules";
@@ -7,12 +7,15 @@ import Assignments from "./Assignments";
 import AssignmentEditor from "./Assignments/AssignmentEditor";
 import Grades from "./Grades";
 
-function Courses() {
+function Courses({ courses }) {
+  const { courseId } = useParams();
+  const course = courses.find((course) => course._id === courseId);
+
   return (
     <div className="w-100">
-      <CourseHeader />
+      <CourseHeader courseId={courseId} course={course} />
       <hr class="mx-3" />
-      <CourseNavigation />
+      <CourseNavigation courseId={courseId} course={course} />
       <div>
         <div
           className="overflow-y-scroll position-fixed bottom-0 end-0 pe-3"

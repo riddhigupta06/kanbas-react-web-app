@@ -1,14 +1,11 @@
-import db from "../../Database";
-import { useParams, useLocation, Link } from "react-router-dom";
+import { useLocation, Link } from "react-router-dom";
 import { PiEyeglassesBold } from "react-icons/pi";
 import "./index.css";
 
-function CourseHeader() {
-  const { courseId } = useParams();
+function CourseHeader({ courseId, course }) {
   const { pathname } = useLocation();
   const paths = pathname.split("/");
   const navPaths = paths.slice(paths.findIndex((p) => p === courseId) + 1);
-  const course = db.courses.find((course) => course._id === courseId);
 
   return (
     <div class="d-flex flex-row my-3 me-3 align-items-center">

@@ -1,13 +1,9 @@
-import { Link, useParams, useLocation } from "react-router-dom";
-import db from "../../Database";
+import { Link, useLocation } from "react-router-dom";
 
-function CourseNavigation() {
+function CourseNavigation({ courseId, course }) {
   const links = ["Home", "Modules", "Assignments", "Grades"];
 
-  const { courseId } = useParams();
   const { pathname } = useLocation();
-
-  const course = db.courses.find((course) => course._id === courseId);
 
   return (
     <div

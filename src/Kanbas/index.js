@@ -1,15 +1,26 @@
-import { React, useState } from "react";
+import { React, useState, useEffect } from "react";
 import { Provider } from "react-redux";
+import axios from "axios";
 import store from "./store";
 import KanbasNavigation from "./KanbasNavigation";
 import { Routes, Route, Navigate } from "react-router-dom";
-import db from "./Database";
 import Dashboard from "./Dashboard";
 import Courses from "./Courses";
 
 function Kanbas() {
+  const [courses, setCourses] = useState([]);
 
-  const [courses, setCourses] = useState(db.courses);
+  const URL = "http://localhost:4000/api/courses";
+
+  const findAllCourses = async () => {
+    const response = await axios.get(URL);
+    setCourses(response.data);
+  };
+
+  useEffect(() => {
+    findAllCourses();
+  }, []);
+
   const [newCourse, setNewCourse] = useState({
     name: "",
     title: "",
@@ -19,24 +30,38 @@ function Kanbas() {
     color: ""
   });
 
-  const addNewCourse = () => {
-    setCourses([...courses, { ...newCourse, _id: new Date().getTime().toString() }]);
+  const addNewCourse = async () => {
+    const response = await axios.post(URL, newCourse);
+    setCourses([response.data,...courses]);
+    setNewCourse({
+      name: "",
+      title: "",
+      number: "",
+      section: "",
+      term: "",
+      color: ""
+    })
   };
 
-  const deleteCourse = (courseId) => {
+  const deleteCourse = async (courseId) => {
+    const response = await axios.delete(`${URL}/${courseId}`);
     setCourses(courses.filter((course) => course._id !== courseId));
   };
 
-  const updateCourse = () => {
-    setCourses(
-      courses.map((c) => {
-        if (c._id === newCourse._id) {
-          return newCourse;
-        } else {
-          return c;
-        }
-      })
-    );
+  const updateCourse = async () => {
+    if (newCourse._id) {
+      const response = await axios.put(`${URL}/${newCourse._id}`, newCourse);
+
+      setCourses(
+        courses.map((c) => {
+          if (c._id === newCourse._id) {
+            return newCourse;
+          } else {
+            return c;
+          }
+        })
+      );
+    }
   };
   
   return (

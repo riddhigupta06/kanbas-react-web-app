@@ -7,18 +7,21 @@ function EncodingParametersInURLs() {
   const [welcome, setWelcome] = useState("");
   const [result, setResult] = useState(0);
 
+  const BASE_URL = process.env.REACT_APP_BASE
+  const A5_URL = `${BASE_URL}/a5`
+
   const fetchSum = async (a, b) => {
-    const response = await axios.get(`http://localhost:4000/a5/add/${a}/${b}`);
+    const response = await axios.get(`${A5_URL}/add/${a}/${b}`);
     setResult(response.data);
   };
   
   const fetchSubtraction = async (a, b) => {
-    const response = await axios.get(`http://localhost:4000/a5/subtract/${a}/${b}`);
+    const response = await axios.get(`${A5_URL}/subtract/${a}/${b}`);
     setResult(response.data);
   };
 
   const fetchWelcome = async () => {
-    const response = await axios.get("http://localhost:4000/a5/welcome");
+    const response = await axios.get(`${A5_URL}/welcome`);
     setWelcome(response.data);
   };
 
@@ -60,23 +63,23 @@ function EncodingParametersInURLs() {
 
       <h3>Path Parameters</h3>
       <a
-        href={`http://localhost:4000/a5/add/${a}/${b}`}
+        href={`${A5_URL}/add/${a}/${b}`}
         className="btn btn-primary">
         Add {a} + {b}
       </a>
       <a
-        href={`http://localhost:4000/a5/subtract/${a}/${b}`}
+        href={`${A5_URL}/subtract/${a}/${b}`}
         className="btn btn-danger">
         Substract {a} - {b}
       </a>
       <h3>Query Parameters</h3>
       <a
-        href={`http://localhost:4000/a5/calculator?operation=add&a=${a}&b=${b}`}
+        href={`${A5_URL}/calculator?operation=add&a=${a}&b=${b}`}
         className="btn btn-primary">
         Add {a} + {b}
       </a>
       <a
-        href={`http://localhost:4000/a5/calculator?operation=subtract&a=${a}&b=${b}`}
+        href={`${A5_URL}/calculator?operation=subtract&a=${a}&b=${b}`}
         className="btn btn-danger">
         Substract {a} - {b}
       </a>

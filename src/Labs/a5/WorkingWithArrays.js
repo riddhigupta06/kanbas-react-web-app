@@ -51,7 +51,8 @@ function WorkingWithArrays() {
         fetchTodos();
     }, []);
 
-    const API = "http://localhost:4000/a5/todos";
+    const BASE_URL = process.env.REACT_APP_BASE
+    const API = `${BASE_URL}/a5/todos`
 
     const getCompleted = async () => {
         const response = await axios.get(`${API}/?completed=true`);

@@ -8,15 +8,14 @@ import Home from "./Home";
 import Assignments from "./Assignments";
 import AssignmentEditor from "./Assignments/AssignmentEditor";
 import Grades from "./Grades";
+import { COURSES_URL } from "./Modules/client";
 
 function Courses() {
   const { courseId } = useParams();
   const [course, setCourse] = useState({});
 
-  const URL = "http://localhost:4000/api/courses";
-
   const findCourseById = async (courseId) => {
-    const response = await axios.get(`${URL}/${courseId}`);
+    const response = await axios.get(`${COURSES_URL}/${courseId}`);
     setCourse(response.data);
   };
 

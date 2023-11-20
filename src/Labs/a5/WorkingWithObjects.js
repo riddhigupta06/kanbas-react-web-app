@@ -14,7 +14,8 @@ function WorkingWithObjects() {
     const [score, setScore] = useState(assignment.score)
     const [completed, setCompleted] = useState(assignment.completed)
 
-    const URL = 'http://localhost:4000/a5/assignment'
+    const BASE_URL = process.env.REACT_APP_BASE
+    const URL = `${BASE_URL}/a5/assignment`
 
     const fetchAssignment = async () => {
         const response = await axios.get(`${URL}`);

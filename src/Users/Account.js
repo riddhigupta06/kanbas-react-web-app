@@ -51,7 +51,7 @@ function Account() {
     return (
         <div className="w-100">
             <h1>Account</h1>
-            {account && (
+            {account ? (
                 <div className="w-50 form-control d-flex flex-column gap-2 p-2">
                     <div className="form-group">
                         <label for="username" style={{fontWeight:500}}>
@@ -144,6 +144,11 @@ function Account() {
                     <button className="btn btn-danger w-100" onClick={signout}>
                         Sign out
                     </button>
+                </div>
+            )
+            : (
+                <div>
+                    You are not logged in! Please try signing in.
                 </div>
             )}
         </div>

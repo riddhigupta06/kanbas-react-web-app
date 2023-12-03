@@ -1,12 +1,25 @@
 import { useState, useEffect } from "react";
+import { useToast } from "@chakra-ui/react";
 import * as client from "./client";
 
 function Account() {
     const [account, setAccount] = useState(null);
+    const toast = useToast();
 
     const fetchAccount = async () => {
         const account = await client.account();
         setAccount(account);
+    };
+
+    const saveUser = async () => {
+        await client.updateUser(account);
+        toast({
+            title: 'Account updated.',
+            description: "We've updated your account.",
+            status: 'success',
+            duration: 5000,
+            isClosable: true,
+        })
     };
     
     const getDOB = () => {
@@ -100,6 +113,9 @@ function Account() {
                             <option value="STUDENT" selected={account.role === 'STUDENT'}>Student</option>
                         </select>
                     </div>
+                    <button className="btn btn-primary w-100" onClick={saveUser}>
+                        Save
+                    </button>
                 </div>
             )}
         </div>

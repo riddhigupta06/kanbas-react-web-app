@@ -3,6 +3,7 @@ import Nav from "../Nav";
 import Signin from "../Users/Signin";
 import Account from "../Users/Account";
 import Home from "./Home";
+import UsersTable from "../Users/UsersTable";
 
 function Project() {
     const { pathname } = useLocation();
@@ -33,14 +34,21 @@ function Project() {
                         >
                             Sign in
                         </Link>
+                        <Link 
+                            className={`list-group-item ${pathname.includes('admin/users') ? 'list-group-item-secondary' : 'list-group-item-warning'}`}
+                            to="/project/admin/users"
+                        >
+                            All Users
+                        </Link>
                     </div>
                 </div>
                 <div className="col-10">
                     <Routes>
-                    <Route path="/" element={<Navigate to="/project/home" />} />
-                    <Route path="/home" element={<Home />} />
-                    <Route path="/signin" element={<Signin />} />
-                    <Route path="/account" element={<Account />} />
+                        <Route path="/" element={<Navigate to="/project/home" />} />
+                        <Route path="/home" element={<Home />} />
+                        <Route path="/signin" element={<Signin />} />
+                        <Route path="/account" element={<Account />} />
+                        <Route path="/admin/users" element={<UsersTable />} />
                     </Routes>
                 </div>
             </div>

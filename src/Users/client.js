@@ -38,3 +38,13 @@ export const deleteUser = async (user) => {
     const response = await axios.delete(`${USERS_API}/${user._id}`);
     return response.data;
 };
+
+export const signup = async (credentials) => {
+    const response = await axios.post(`${USERS_API}/signup`, credentials);
+    return response.data;
+};
+
+export const signout = async () => {
+    const response = await axios.post(`${USERS_API}/signout`);
+    return response.data;
+};

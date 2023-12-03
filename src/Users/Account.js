@@ -1,10 +1,14 @@
 import { useState, useEffect } from "react";
 import { useToast } from "@chakra-ui/react";
 import * as client from "./client";
+import { useNavigate } from "react-router";
+import { Link } from "react-router-dom";
 
 function Account() {
     const [account, setAccount] = useState(null);
     const toast = useToast();
+
+    const navigate = useNavigate();
 
     const fetchAccount = async () => {
         const account = await client.account();
@@ -21,7 +25,12 @@ function Account() {
             isClosable: true,
         })
     };
-    
+
+    const signout = async () => {
+        await client.signout();
+        navigate("/project/signin");
+    };
+
     const getDOB = () => {
         const date = new Date(account.dob)
 
@@ -44,6 +53,17 @@ function Account() {
             <h1>Account</h1>
             {account && (
                 <div className="w-50 form-control d-flex flex-column gap-2 p-2">
+                    <div className="form-group">
+                        <label for="username" style={{fontWeight:500}}>
+                            Username
+                        </label>
+                        <input 
+                            disabled={true}
+                            id="username"
+                            value={account.username} 
+                            className="form-control"
+                        />
+                    </div>
                     <div className="form-group">
                         <label for="firstName" style={{fontWeight:500}}>
                             First Name
@@ -115,6 +135,14 @@ function Account() {
                     </div>
                     <button className="btn btn-primary w-100" onClick={saveUser}>
                         Save
+                    </button>
+                    <Link to="/project/admin/users">
+                        <button className="btn btn-warning w-100">
+                            All Users
+                        </button>
+                    </Link>
+                    <button className="btn btn-danger w-100" onClick={signout}>
+                        Sign out
                     </button>
                 </div>
             )}

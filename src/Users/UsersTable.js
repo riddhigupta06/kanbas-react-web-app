@@ -94,7 +94,6 @@ function UsersTable() {
         }
 
         const date = new Date(user.dob)
-
         const formattedYear = date.getFullYear().toString()
         const month = date.getMonth() + 1
         const formattedMonth = month < 10 ? '0'+month.toString() : month.toString()

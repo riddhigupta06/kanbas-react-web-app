@@ -1,12 +1,10 @@
 import { useState, useEffect } from "react";
-import { useToast } from "@chakra-ui/react";
 import * as client from "./client";
 import { useNavigate } from "react-router";
 import { Link } from "react-router-dom";
 
 function Account() {
     const [account, setAccount] = useState(null);
-    const toast = useToast();
 
     const navigate = useNavigate();
 
@@ -17,13 +15,6 @@ function Account() {
 
     const saveUser = async () => {
         await client.updateUser(account);
-        toast({
-            title: 'Account updated.',
-            description: "We've updated your account.",
-            status: 'success',
-            duration: 5000,
-            isClosable: true,
-        })
     };
 
     const signout = async () => {

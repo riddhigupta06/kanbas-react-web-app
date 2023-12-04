@@ -1,34 +1,18 @@
 import React, { useState, useEffect } from "react";
 import { BsTrash3Fill, BsFillCheckCircleFill, BsPencil, BsPlusCircleFill } from "react-icons/bs";
 import * as client from "./client";
-import { useToast } from "@chakra-ui/react";
 
 function UsersTable() {
     const [users, setUsers] = useState([]);
     const [user, setUser] = useState({ username: "", firstName:"", lastName:"", email:"", password: "", role: "USER" });
-    const toast = useToast();
 
     const createUser = async () => {
         try {
         const newUser = await client.createUser(user);
             setUsers([newUser, ...users]);
             setUser({ username: "", firstName:"", lastName:"", email:"", password: "", role: "USER" })
-            toast({
-                title: 'User created.',
-                description: "We've created your new user.",
-                status: 'success',
-                duration: 5000,
-                isClosable: true,
-            })
         } catch (err) {
             console.log(err);
-            toast({
-                title: 'User creation failed.',
-                description: "We couldn't create a new user.",
-                status: 'error',
-                duration: 5000,
-                isClosable: true,
-            })
         }
     };
 
@@ -36,22 +20,8 @@ function UsersTable() {
         try {
             await client.deleteUser(user);
             setUsers(users.filter((u) => u._id !== user._id));
-            toast({
-                title: 'User deleted.',
-                description: "We've deleted the user.",
-                status: 'success',
-                duration: 5000,
-                isClosable: true,
-            })
         } catch (err) {
             console.log(err);
-            toast({
-                title: 'User deletion failed.',
-                description: "We couldn't delete this user.",
-                status: 'error',
-                duration: 5000,
-                isClosable: true,
-            })
         }
     };
 
@@ -66,25 +36,13 @@ function UsersTable() {
 
     const updateUser = async () => {
         try {
+            console.log('here')
             const status = await client.updateUser(user);
-            setUsers(users.map((u) => (u._id === user._id ? user : u)));
+            console.log(status)
+            setUsers([...users.map((u) => (u._id === user._id ? user : u))]);
             setUser({ username: "", firstName:"", lastName:"", email:"", password: "", role: "USER" })
-            toast({
-                title: 'User updated.',
-                description: "We've updated the user.",
-                status: 'success',
-                duration: 5000,
-                isClosable: true,
-            })
         } catch (err) {
             console.log(err);
-            toast({
-                title: 'User updation failed.',
-                description: "We couldn't update this user.",
-                status: 'error',
-                duration: 5000,
-                isClosable: true,
-            })
         }
     };
     
